@@ -72,8 +72,7 @@ canvas {
 
 /* Estilos para o índice de navegação - Estilo Acadêmico */
 .navigation-index {
-    position: sticky;
-    top: 20px;
+    position: static;
     z-index: 100;
     font-family: 'Georgia', 'Times New Roman', serif;
 }
