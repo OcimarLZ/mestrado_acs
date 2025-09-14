@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Gráfico Inclusão - Debug</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Teste do Gráfico de Inclusão de Matriculados</h1>
+    <div style="width: 800px; height: 400px;">
+        <canvas id="inclusaoMatriculadosChart"></canvas>
+    </div>
+    
+    <div id="debug-info">
+        <h3>Debug Info:</h3>
+        <p id="canvas-status">Canvas: Não verificado</p>
+        <p id="data-status">Dados: Não carregados</p>
+        <p id="chart-status">Gráfico: Não criado</p>
+    </div>
+
+    <script>
+        console.log('=== DEBUG: Página carregada ===');
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== DEBUG: DOM carregado ===');
+            
+            // Verificar se o canvas existe
+            const canvas = document.getElementById('inclusaoMatriculadosChart');
+            const canvasStatus = document.getElementById('canvas-status');
+            
+            if (canvas) {
+                console.log('=== DEBUG: Canvas encontrado ===');
+                canvasStatus.textContent = 'Canvas: Encontrado ✓';
+                
+                // Tentar carregar os dados
+                const dataStatus = document.getElementById('data-status');
+                const chartStatus = document.getElementById('chart-status');
+                
+                fetch('dados_inclusao_matriculados.json')
+                    .then(response => {
+                        console.log('=== DEBUG: Resposta fetch ===', response.status);
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('=== DEBUG: Dados carregados ===', data);
+                        dataStatus.textContent = 'Dados: Carregados ✓';
+                        
+                        // Criar o gráfico
+                        const ctx = canvas.getContext('2d');
+                        const chart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: data.anos,
+                                datasets: data.datasets.map((dataset, index) => ({
+                                    label: dataset.label,
+                                    data: dataset.data,
+                                    borderColor: ['#FF6384', '#36A2EB', '#FFCE56'][index],
+                                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)'][index],
+                                    fill: false,
+                                    tension: 0.1
+                                }))
+                            },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                        text: 'Inclusão de Matriculados por Ano'
+                                    },
+                                    legend: {
+                                        display: true,
+                                        position: 'top'
+                                    }
+                                },
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: 'Número de Matriculados'
+                                        }
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Ano'
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                        
+                        console.log('=== DEBUG: Gráfico criado ===', chart);
+                        chartStatus.textContent = 'Gráfico: Criado ✓';
+                    })
+                    .catch(error => {
+                        console.error('=== DEBUG: Erro ao carregar dados ===', error);
+                        dataStatus.textContent = 'Dados: Erro - ' + error.message;
+                    });
+            } else {
+                console.error('=== DEBUG: Canvas não encontrado ===');
+                canvasStatus.textContent = 'Canvas: Não encontrado ✗';
+            }
+        });
+    </script>
+</body>
+</html>

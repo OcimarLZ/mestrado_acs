@@ -1,0 +1,92 @@
+[
+  {
+    "ano": 2014,
+    "ingressos_masc": 2980,
+    "ingressos_fem": 3803,
+    "matriculas_masc": 7409,
+    "matriculas_fem": 10201,
+    "concluintes_masc": 806,
+    "concluintes_fem": 1415
+  },
+  {
+    "ano": 2015,
+    "ingressos_masc": 3023,
+    "ingressos_fem": 3712,
+    "matriculas_masc": 7766,
+    "matriculas_fem": 10466,
+    "concluintes_masc": 857,
+    "concluintes_fem": 1543
+  },
+  {
+    "ano": 2016,
+    "ingressos_masc": 3250,
+    "ingressos_fem": 3861,
+    "matriculas_masc": 7858,
+    "matriculas_fem": 10647,
+    "concluintes_masc": 930,
+    "concluintes_fem": 1566
+  },
+  {
+    "ano": 2017,
+    "ingressos_masc": 3257,
+    "ingressos_fem": 4291,
+    "matriculas_masc": 8044,
+    "matriculas_fem": 10965,
+    "concluintes_masc": 998,
+    "concluintes_fem": 1843
+  },
+  {
+    "ano": 2018,
+    "ingressos_masc": 3563,
+    "ingressos_fem": 4838,
+    "matriculas_masc": 8459,
+    "matriculas_fem": 11612,
+    "concluintes_masc": 1191,
+    "concluintes_fem": 1929
+  },
+  {
+    "ano": 2019,
+    "ingressos_masc": 3878,
+    "ingressos_fem": 4955,
+    "matriculas_masc": 9091,
+    "matriculas_fem": 12457,
+    "concluintes_masc": 1321,
+    "concluintes_fem": 2025
+  },
+  {
+    "ano": 2020,
+    "ingressos_masc": 3777,
+    "ingressos_fem": 5354,
+    "matriculas_masc": 9020,
+    "matriculas_fem": 12961,
+    "concluintes_masc": 1153,
+    "concluintes_fem": 1823
+  },
+  {
+    "ano": 2021,
+    "ingressos_masc": 3975,
+    "ingressos_fem": 6532,
+    "matriculas_masc": 9325,
+    "matriculas_fem": 14075,
+    "concluintes_masc": 1200,
+    "concluintes_fem": 1769
+  },
+  {
+    "ano": 2022,
+    "ingressos_masc": 4676,
+    "ingressos_fem": 7415,
+    "matriculas_masc": 9295,
+    "matriculas_fem": 14624,
+    "concluintes_masc": 1046,
+    "concluintes_fem": 1600
+  },
+  {
+    "ano": 2023,
+    "ingressos_masc": 5098,
+    "ingressos_fem": 8324,
+    "matriculas_masc": 9905,
+    "matriculas_fem": 16077,
+    "concluintes_masc": 1258,
+    "concluintes_fem": 2030
+  }
+]

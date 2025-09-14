@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Comparação Financiamento</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        .chart-container {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: .25rem;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
+            position: relative;
+            height: 450px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .debug-info {
+            background-color: #e9ecef;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comparação dos Gráficos de Financiamento</h1>
+    
+    <div class="debug-info" id="debug-ingressantes">
+        <strong>Debug Ingressantes:</strong> Aguardando...
+    </div>
+    
+    <h2>Financiamento dos Ingressantes</h2>
+    <div class="chart-container">
+        <canvas id="financiamentoIngressantesChart"></canvas>
+    </div>
+    
+    <div class="debug-info" id="debug-matriculados">
+        <strong>Debug Matriculados:</strong> Aguardando...
+    </div>
+    
+    <h2>Financiamento dos Matriculados</h2>
+    <div class="chart-container">
+        <canvas id="financiamentoMatriculadosChart"></canvas>
+    </div>
+    
+    <script>
+        console.log('=== TESTE COMPARAÇÃO FINANCIAMENTO ===');
+        
+        // Debug para ingressantes
+        document.addEventListener('DOMContentLoaded', function() {
+            const debugIngressantes = document.getElementById('debug-ingressantes');
+            const debugMatriculados = document.getElementById('debug-matriculados');
+            
+            // Verificar canvas ingressantes
+            const canvasIngressantes = document.getElementById('financiamentoIngressantesChart');
+            debugIngressantes.innerHTML = '<strong>Debug Ingressantes:</strong> Canvas encontrado: ' + (canvasIngressantes ? 'SIM' : 'NÃO');
+            
+            // Verificar canvas matriculados
+            const canvasMatriculados = document.getElementById('financiamentoMatriculadosChart');
+            debugMatriculados.innerHTML = '<strong>Debug Matriculados:</strong> Canvas encontrado: ' + (canvasMatriculados ? 'SIM' : 'NÃO');
+            
+            // Verificar se Chart.js está disponível
+            console.log('Chart.js disponível:', typeof Chart !== 'undefined');
+            console.log('ChartDataLabels disponível:', typeof ChartDataLabels !== 'undefined');
+        });
+    </script>
+    
+    <script src="financiamento_ingressantes_chart.js"></script>
+    <script src="financiamento_matriculados_chart.js"></script>
+</body>
+</html>

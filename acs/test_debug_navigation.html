@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Navegação</title>
+    <style>
+        .page-content { display: none; }
+        .page-content.active { display: block; }
+        #loading-spinner { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Teste de Navegação</h1>
+    
+    <button onclick="testLoadPage('ies-perfil')">Testar IES Perfil</button>
+    <button onclick="testLoadPage('discentes')">Testar Discentes</button>
+    
+    <div id="home-content" class="page-content active">
+        <h2>Conteúdo Home</h2>
+        <p>Esta é a página inicial</p>
+    </div>
+    
+    <div id="page-content" class="page-content">
+        <div id="loading-spinner">Carregando...</div>
+        <div id="dynamic-content"></div>
+    </div>
+    
+    <script>
+        // Função de teste simplificada
+        async function testLoadPage(pageId) {
+            console.log('=== INICIANDO TESTE DE NAVEGAÇÃO ===');
+            console.log('PageId:', pageId);
+            
+            // Verificar elementos DOM
+            const homeContent = document.getElementById('home-content');
+            const pageContent = document.getElementById('page-content');
+            const dynamicContent = document.getElementById('dynamic-content');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            
+            console.log('Elementos DOM encontrados:', {
+                homeContent: !!homeContent,
+                pageContent: !!pageContent,
+                dynamicContent: !!dynamicContent,
+                loadingSpinner: !!loadingSpinner
+            });
+            
+            if (!homeContent || !pageContent || !dynamicContent || !loadingSpinner) {
+                console.error('ERRO: Elementos DOM não encontrados!');
+                return;
+            }
+            
+            // Mostrar loading
+            console.log('Mostrando loading...');
+            homeContent.style.display = 'none';
+            pageContent.style.display = 'block';
+            loadingSpinner.style.display = 'block';
+            dynamicContent.innerHTML = '';
+            
+            try {
+                // Tentar carregar página
+                console.log('Fazendo fetch para:', `pages/${pageId}.html`);
+                const response = await fetch(`pages/${pageId}.html`);
+                console.log('Response status:', response.status);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const content = await response.text();
+                console.log('Conteúdo carregado, tamanho:', content.length);
+                
+                // Mostrar conteúdo
+                console.log('Exibindo conteúdo...');
+                loadingSpinner.style.display = 'none';
+                dynamicContent.innerHTML = content;
+                
+                console.log('=== NAVEGAÇÃO CONCLUÍDA COM SUCESSO ===');
+                
+            } catch (error) {
+                console.error('ERRO ao carregar página:', error);
+                loadingSpinner.style.display = 'none';
+                dynamicContent.innerHTML = `<div style="color: red;">Erro: ${error.message}</div>`;
+            }
+        }
+        
+        console.log('Script de teste carregado!');
+    </script>
+</body>
+</html>

@@ -1,0 +1,1046 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card shadow-sm mb-5">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Capítulo 4</h3>
+                    <h4 class="text-center mb-4">Indicadores da Educação Superior em Chapecó: Um Retrato da Expansão na Vigência do PNE (2014-2024)</h4>
+                    
+                    <h5 class="mb-3">Introdução</h5>
+                    <p class="text-justify">Este capítulo dedica-se a sistematizar e analisar os indicadores quantitativos da educação superior em Chapecó, com foco no período de vigência do Plano Nacional de Educação (2014-2024). O objetivo é fornecer um panorama detalhado da evolução do setor na última década.</p>
+                    <p class="text-justify">Toda a análise empírica apresentada é fundamentada nos microdados do Censo da Educação Superior, coletados e disponibilizados anualmente pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP). Essa base de dados oficial garante a robustez e a confiabilidade das informações aqui consolidadas.</p>
+                    <p class="text-justify">Para atingir tal objetivo, o capítulo está estruturado em quatro seções principais. A primeira traça o perfil das Instituições de Educação Superior (IES) em operação no município. A segunda analisa as características do corpo docente. A terceira se debruça sobre a oferta de cursos de graduação. Por fim, a quarta e mais densa seção detalha o perfil do corpo discente, investigando as dinâmicas de acesso e permanência. O capítulo se encerra com uma síntese analítica que dialoga diretamente com as metas do PNE.</p>
+                    <p class="text-justify">Dessa forma, os dados aqui apresentados fornecerão a base empírica para responder às questões centrais desta dissertação, investigando as dinâmicas de expansão da educação superior em Chapecó e seu alinhamento (ou desalinhamento) com as políticas nacionais.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="section-header mb-4">
+                <h2 class="section-title">
+                    <i class="fas fa-university me-3"></i>
+                    4.1 O perfil das Instituições de Ensino Superior (IES) de Chapecó
+                </h2>
+                <p class="section-description">
+                    Análise detalhada do perfil das instituições de ensino superior presentes em Chapecó,
+                    incluindo categorização por rede, modalidade e organização acadêmica.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Relação das IES que atuam em Chapecó -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-table me-2"></i>
+                        Relação das IES que atuam em Chapecó
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted small mb-4">A tabela a seguir apresenta uma lista detalhada das Instituições de Ensino Superior (IES) atualmente em operação na cidade de Chapecó, fornecendo informações essenciais como categoria administrativa, organização acadêmica e dados de contato, permitindo uma visão abrangente do cenário educacional local.</p>
+                    
+                    <div id="table-mantenedoras-ies-container" class="table-container">
+                        <button class="btn btn-success mb-3" onclick="exportToExcel(ies_data, 'ies_chapeco')"><i class="fas fa-download"></i> Exportar para Excel</button>
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Nome da IES</th>
+            <th>Sigla</th>
+            <th>Categoria Administrativa</th>
+            <th>Modalidades</th>
+        </tr>
+    </thead>
+    <tbody>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO ADVENTISTA DE SÃO PAULO</td>
+                            <td>UNASP</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO ANHANGUERA PITÁGORAS AMPLI</td>
+                            <td>-</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO ANHANGUERA PITÁGORAS UNOPAR DE NITERÓI</td>
+                            <td>UNIAN-RJ</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO CIDADE VERDE</td>
+                            <td>UniCV</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO DA GRANDE DOURADOS</td>
+                            <td>UNIGRAN</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO DAS AMÉRICAS</td>
+                            <td>CAM</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO DAS FACULDADES METROPOLITANAS UNIDAS</td>
+                            <td>FMU</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO DE ARARARAS -</td>
+                            <td>UNAR</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO DO SUL DE MINAS</td>
+                            <td>UNIS-MG</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO ESTÁCIO DE BRASÍLIA - ESTÁCIO BRASÍLIA</td>
+                            <td>ESTÁCIO BRASÍLIA</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO FACVEST</td>
+                            <td>UNIFACVEST</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO FAEL</td>
+                            <td>UNIFAEL</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO FAI</td>
+                            <td>-</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO FAVENI</td>
+                            <td>UNIFAVENI</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO FAVIP WYDEN</td>
+                            <td>UniFavip Wyden</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO GUAIRACÁ</td>
+                            <td>UNIGUAIRACÁ</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO INTERNACIONAL</td>
+                            <td>UNINTER</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO JOAQUIM NABUCO DE RECIFE</td>
+                            <td>UNINABUCO RECIFE</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO LEONARDO DA VINCI</td>
+                            <td>UNIASSELVI</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO MAURÍCIO DE NASSAU</td>
+                            <td>UNINASSAU</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO SENAC</td>
+                            <td>SENACSP</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO SENAI BLUMENAU</td>
+                            <td>-</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO SOCIESC</td>
+                            <td>-</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO UNIBTA</td>
+                            <td>-</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO UNIDOM - BOSCO</td>
+                            <td>UNIDOM - BOSCO</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO UNIFATECIE</td>
+                            <td>UNIFATECIE</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CENTRO UNIVERSITÁRIO UNIFECAF</td>
+                            <td>-</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>CLARETIANO - CENTRO UNIVERSITÁRIO</td>
+                            <td>CLARETIANOBT</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>ESCOLA SUPERIOR ABERTA DO BRASIL</td>
+                            <td>ESAB</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>FACULDADE CENSUPEG</td>
+                            <td>-</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>FACULDADE DE EDUCAÇÃO SUPERIOR DE CHAPECÓ</td>
+                            <td>FACESC</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>FACULDADE DE TECNOLOGIA SENAI CHAPECÓ</td>
+                            <td>SENAI</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>FACULDADE EMPRESARIAL DE CHAPECÓ</td>
+                            <td>FAEM</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância, Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>FACULDADE PITÁGORAS UNOPAR DE CHAPECÓ</td>
+                            <td>-</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>FACULDADE PREPARA</td>
+                            <td>-</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>FACULDADE SANTA RITA DE CHAPECÓ</td>
+                            <td>-</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>FACULDADE SENAC CHAPECÓ</td>
+                            <td>SENAC</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>FACULDADE UNINA</td>
+                            <td>-</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>FUNDAÇÃO UNIVERSIDADE DO ESTADO DE SANTA CATARINA</td>
+                            <td>UDESC</td>
+                            <td>Pública Estadual</td>
+                            <td>A Distância, Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA  DE SANTA CATARINA</td>
+                            <td>IFSC</td>
+                            <td>Pública Federal</td>
+                            <td>A Distância, Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE ANHANGUERA</td>
+                            <td>UNIDERP</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE ANHEMBI MORUMBI</td>
+                            <td>UAM</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE BRASIL</td>
+                            <td>UB</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE CESUMAR</td>
+                            <td>UNICESUMAR</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE CIDADE DE SÃO PAULO</td>
+                            <td>UNICID</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE COMUNITÁRIA DA REGIÃO DE CHAPECÓ</td>
+                            <td>UNOCHAPECÓ</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância, Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE DE MARÍLIA</td>
+                            <td>UNIMAR</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE DO CONTESTADO</td>
+                            <td>UNC</td>
+                            <td>Especial</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE DO OESTE DE SANTA CATARINA</td>
+                            <td>UNOESC</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância, Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE DO SUL DE SANTA CATARINA</td>
+                            <td>UNISUL</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE ESTÁCIO DE SÁ</td>
+                            <td>UNESA</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE FEDERAL DA FRONTEIRA SUL</td>
+                            <td>UFFS</td>
+                            <td>Pública Federal</td>
+                            <td>Presencial</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE FEDERAL DE SANTA CATARINA</td>
+                            <td>UFSC</td>
+                            <td>Pública Federal</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE LA SALLE</td>
+                            <td>UNILASALLE</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE LUTERANA DO BRASIL</td>
+                            <td>ULBRA</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE PARANAENSE</td>
+                            <td>UNIPAR</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE PAULISTA</td>
+                            <td>UNIP</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE PITÁGORAS UNOPAR ANHANGUERA</td>
+                            <td>-</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE POSITIVO</td>
+                            <td>UP</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE POTIGUAR</td>
+                            <td>UNP</td>
+                            <td>Privada com fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+                        <tr>
+                            <td>UNIVERSIDADE UNIVERSUS VERITAS GUARULHOS</td>
+                            <td>Univeritas UNG</td>
+                            <td>Privada sem fins lucrativos</td>
+                            <td>A Distância</td>
+                        </tr>
+    </tbody>
+</table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Evolução por Categoria Administrativa -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-line me-2"></i>
+                        Evolução por Categoria Administrativa
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="educacaoSuperiorPorRedeChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportEducacaoSuperiorPorRede()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modalidade Presencial -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-users me-2"></i>
+                        Educação Superior por Modalidade - Presencial
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="educacaoSuperiorPorModalidadePresencialChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportEducacaoSuperiorPorModalidadePresencial()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modalidade EAD -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-laptop me-2"></i>
+                        Educação Superior por Modalidade - EAD
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="educacaoSuperiorPorModalidadeEadChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportEducacaoSuperiorPorModalidadeEad()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Organização Acadêmica -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-building me-2"></i>
+                        Educação Superior por Organização Acadêmica
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="educacaoSuperiorPorOrganizacaoAcademicaChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportEducacaoSuperiorPorOrganizacaoAcademica()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ranking das 10 Maiores IES -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-trophy me-2"></i>
+                        Ranking das 10 Maiores IES por Matrículas
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="analiseIesUffsChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportAnaliseIesUffs()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Análise UNOESC -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-graduation-cap me-2"></i>
+                        Análise UNOESC
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="analiseIesUnoescChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportAnaliseIesUnoesc()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menores IES -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-list me-2"></i>
+                        Resumo das Menores IES
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div id="menoresIesResumoTable"></div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportMenoresIesResumo()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Análise Textual -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card analysis-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-bar me-2"></i>
+                        Análise do Perfil das IES
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="analysis-content">
+                        <p class="lead">
+                            A análise do perfil das Instituições de Ensino Superior (IES) de Chapecó revela 
+                            características importantes sobre o cenário educacional da região.
+                        </p>
+                        
+                        <h6><i class="fas fa-university me-2"></i>Categoria Administrativa</h6>
+                        <p>
+                            O setor privado domina o cenário educacional superior em Chapecó, representando 
+                            a maior parte das matrículas. As instituições públicas, embora em menor número, 
+                            mantêm papel fundamental na democratização do acesso ao ensino superior.
+                        </p>
+                        
+                        <h6><i class="fas fa-laptop me-2"></i>Modalidades de Ensino</h6>
+                        <p>
+                            A modalidade presencial ainda predomina, mas observa-se crescimento significativo 
+                            da educação a distância (EAD), especialmente após 2020, reflexo das mudanças 
+                            impostas pela pandemia e da digitalização do ensino.
+                        </p>
+                        
+                        <h6><i class="fas fa-building me-2"></i>Organização Acadêmica</h6>
+                        <p>
+                            As faculdades constituem a maior parte das instituições, seguidas pelos centros 
+                            universitários e universidades. Esta distribuição reflete a diversidade da oferta 
+                            educacional na região.
+                        </p>
+                        
+                        <h6><i class="fas fa-trophy me-2"></i>Principais Instituições</h6>
+                        <p>
+                            A UFFS (Universidade Federal da Fronteira Sul) e a UNOESC (Universidade do Oeste 
+                            de Santa Catarina) destacam-se como as principais instituições em número de matrículas, 
+                            representando pilares fundamentais da educação superior regional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const ies_data = [
+    {
+        "nome": "CENTRO UNIVERSITÁRIO ADVENTISTA DE SÃO PAULO",
+        "sigla": "UNASP",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO ANHANGUERA PITÁGORAS AMPLI",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO ANHANGUERA PITÁGORAS UNOPAR DE NITERÓI",
+        "sigla": "UNIAN-RJ",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO CIDADE VERDE",
+        "sigla": "UniCV",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DA GRANDE DOURADOS",
+        "sigla": "UNIGRAN",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DAS AMÉRICAS",
+        "sigla": "CAM",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DAS FACULDADES METROPOLITANAS UNIDAS",
+        "sigla": "FMU",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DE ARARARAS -",
+        "sigla": "UNAR",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DO SUL DE MINAS",
+        "sigla": "UNIS-MG",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO ESTÁCIO DE BRASÍLIA - ESTÁCIO BRASÍLIA",
+        "sigla": "ESTÁCIO BRASÍLIA",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FACVEST",
+        "sigla": "UNIFACVEST",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FAEL",
+        "sigla": "UNIFAEL",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FAI",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FAVENI",
+        "sigla": "UNIFAVENI",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FAVIP WYDEN",
+        "sigla": "UniFavip Wyden",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO GUAIRACÁ",
+        "sigla": "UNIGUAIRACÁ",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO INTERNACIONAL",
+        "sigla": "UNINTER",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO JOAQUIM NABUCO DE RECIFE",
+        "sigla": "UNINABUCO RECIFE",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO LEONARDO DA VINCI",
+        "sigla": "UNIASSELVI",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO MAURÍCIO DE NASSAU",
+        "sigla": "UNINASSAU",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO SENAC",
+        "sigla": "SENACSP",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO SENAI BLUMENAU",
+        "sigla": "-",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO SOCIESC",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO UNIBTA",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO UNIDOM - BOSCO",
+        "sigla": "UNIDOM - BOSCO",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO UNIFATECIE",
+        "sigla": "UNIFATECIE",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO UNIFECAF",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CLARETIANO - CENTRO UNIVERSITÁRIO",
+        "sigla": "CLARETIANOBT",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "ESCOLA SUPERIOR ABERTA DO BRASIL",
+        "sigla": "ESAB",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "FACULDADE CENSUPEG",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "FACULDADE DE EDUCAÇÃO SUPERIOR DE CHAPECÓ",
+        "sigla": "FACESC",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "FACULDADE DE TECNOLOGIA SENAI CHAPECÓ",
+        "sigla": "SENAI",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "FACULDADE EMPRESARIAL DE CHAPECÓ",
+        "sigla": "FAEM",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância, Presencial"
+    },
+    {
+        "nome": "FACULDADE PITÁGORAS UNOPAR DE CHAPECÓ",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "FACULDADE PREPARA",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "FACULDADE SANTA RITA DE CHAPECÓ",
+        "sigla": "-",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "FACULDADE SENAC CHAPECÓ",
+        "sigla": "SENAC",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "FACULDADE UNINA",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "FUNDAÇÃO UNIVERSIDADE DO ESTADO DE SANTA CATARINA",
+        "sigla": "UDESC",
+        "categoria": "Pública Estadual",
+        "modalidades": "A Distância, Presencial"
+    },
+    {
+        "nome": "INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA  DE SANTA CATARINA",
+        "sigla": "IFSC",
+        "categoria": "Pública Federal",
+        "modalidades": "A Distância, Presencial"
+    },
+    {
+        "nome": "UNIVERSIDADE ANHANGUERA",
+        "sigla": "UNIDERP",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE ANHEMBI MORUMBI",
+        "sigla": "UAM",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE BRASIL",
+        "sigla": "UB",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE CESUMAR",
+        "sigla": "UNICESUMAR",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE CIDADE DE SÃO PAULO",
+        "sigla": "UNICID",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE COMUNITÁRIA DA REGIÃO DE CHAPECÓ",
+        "sigla": "UNOCHAPECÓ",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância, Presencial"
+    },
+    {
+        "nome": "UNIVERSIDADE DE MARÍLIA",
+        "sigla": "UNIMAR",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE DO CONTESTADO",
+        "sigla": "UNC",
+        "categoria": "Especial",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE DO OESTE DE SANTA CATARINA",
+        "sigla": "UNOESC",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância, Presencial"
+    },
+    {
+        "nome": "UNIVERSIDADE DO SUL DE SANTA CATARINA",
+        "sigla": "UNISUL",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE ESTÁCIO DE SÁ",
+        "sigla": "UNESA",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE FEDERAL DA FRONTEIRA SUL",
+        "sigla": "UFFS",
+        "categoria": "Pública Federal",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "UNIVERSIDADE FEDERAL DE SANTA CATARINA",
+        "sigla": "UFSC",
+        "categoria": "Pública Federal",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE LA SALLE",
+        "sigla": "UNILASALLE",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE LUTERANA DO BRASIL",
+        "sigla": "ULBRA",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE PARANAENSE",
+        "sigla": "UNIPAR",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE PAULISTA",
+        "sigla": "UNIP",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE PITÁGORAS UNOPAR ANHANGUERA",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE POSITIVO",
+        "sigla": "UP",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE POTIGUAR",
+        "sigla": "UNP",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE UNIVERSUS VERITAS GUARULHOS",
+        "sigla": "Univeritas UNG",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    }
+];
+
+// Aguardar carregamento completo da página antes de inicializar gráficos
+document.addEventListener('DOMContentLoaded', function() {
+    // Os gráficos serão inicializados pelos scripts específicos carregados pelo navigation.js
+    console.log('Página IES Perfil carregada');
+});
+
+// Função para exportar dados para Excel
+function exportToExcel(data, filename) {
+    const csvContent = "data:text/csv;charset=utf-8," +
+        "Nome,Sigla,Categoria,Modalidades\n" +
+        data.map(row => `"${row.nome}","${row.sigla}","${row.categoria}","${row.modalidades}"`.replace(/\n/g, ' ')).join("\n");
+    
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", filename + ".csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+</script>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Educação Superior em Chapecó (2014-2024)</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_modular.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-graduation-cap me-2"></i>
+                Educação Superior - Chapecó
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" onclick="loadPage('home')">
+                            <i class="fas fa-home me-1"></i>Início
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-university me-1"></i>Instituições
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="loadPage('ies-perfil')">4.1 Perfil das IES</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-chart-bar me-1"></i>Análises
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="loadPage('areas-conhecimento')">4.2 Áreas de Conhecimento</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="loadPage('cursos-superiores')">4.3 Cursos Superiores</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-users me-1"></i>Pessoas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="loadPage('docentes-tecnicos')">4.6 Docentes e Técnicos</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="loadPage('discentes')">Discentes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-cog me-1"></i>Outros
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="loadPage('meta12-pne')">Meta 12 PNE</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="loadPage('populacao')">População Chapecó</a></li>
+                            <li><a class="dropdown-item" href="index.html" target="_blank">Versão Completa</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid" style="margin-top: 76px;">
+        <div id="main-content">
+            <!-- Home Page Content -->
+            <div id="home-content" class="page-content active">
+                <div class="container">
+                    <header class="text-center mb-5 py-5">
+                        <img src="images/Chapec%C3%B3.png" alt="Mapa de Chapecó" class="img-fluid mb-4" style="max-height: 200px;">
+                        <h1 class="display-5 text-primary">A EDUCAÇÃO SUPERIOR NO CONTEXTO DO PLANO NACIONAL DE EDUCAÇÃO</h1>
+                        <h2 class="h4 text-secondary">ANÁLISE DAS DINÂMICAS NO MUNICÍPIO DE CHAPECÓ (2014-2024)</h2>
+
+                        <div class="mt-5">
+                            <p class="mb-0 fw-bold">UNIVERSIDADE FEDERAL DA FRONTEIRA SUL</p>
+                            <p class="mb-0">CAMPUS CHAPECÓ</p>
+                            <p class="mb-3">CURSO DE MESTRADO EM EDUCAÇÃO</p>
+
+                            <p class="mt-4 mb-1 fs-5"><strong>ANA CRISTINA DA SILVA</strong></p>
+
+                            <div class="row justify-content-center">
+                                <div class="col-md-8">
+                                    <p class="small text-muted">
+                                        Dissertação apresentada ao Programa de Pós-Graduação em Educação da Universidade Federal da Fronteira Sul (UFFS), como requisito parcial para obtenção do título de Mestre em Educação.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <p class="mt-3 mb-0"><strong>Linha de Pesquisa:</strong> Políticas Educacionais</p>
+                            <p><strong>Orientador:</strong> Prof. Dr. Joviles Vitório Trevisol</p>
+
+                            <p class="mt-4">CHAPECÓ<br>2025</p>
+                        </div>
+                    </header>
+
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <!-- Intro moved to subpages -->
+                        </div>
+                    </div>
+
+                    <!-- Navigation Cards -->
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <h3 class="text-center mb-4">Navegue pelas Seções</h3>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm hover-card" onclick="loadPage('ies-perfil')">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-university fa-3x text-primary mb-3"></i>
+                                    <h5 class="card-title">4.1 Perfil das IES</h5>
+                                    <p class="card-text">Análise das Instituições de Ensino Superior em operação em Chapecó</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm hover-card" onclick="loadPage('areas-conhecimento')">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-brain fa-3x text-success mb-3"></i>
+                                    <h5 class="card-title">4.2 Áreas de Conhecimento</h5>
+                                    <p class="card-text">Dinâmicas da educação superior por área de conhecimento</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm hover-card" onclick="loadPage('cursos-superiores')">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-book fa-3x text-info mb-3"></i>
+                                    <h5 class="card-title">4.3 Cursos Superiores</h5>
+                                    <p class="card-text">Análise sobre os cursos superiores em Chapecó</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm hover-card" onclick="loadPage('docentes-tecnicos')">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-chalkboard-teacher fa-3x text-warning mb-3"></i>
+                                    <h5 class="card-title">4.6 Docentes e Técnicos</h5>
+                                    <p class="card-text">Análise do corpo docente e técnico das IES</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm hover-card" onclick="loadPage('discentes')">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-user-graduate fa-3x text-danger mb-3"></i>
+                                    <h5 class="card-title">Discentes</h5>
+                                    <p class="card-text">Perfil e dinâmicas do corpo discente</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm hover-card" onclick="loadPage('meta12-pne')">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-chart-line fa-3x text-secondary mb-3"></i>
+                                    <h5 class="card-title">Meta 12 PNE</h5>
+                                    <p class="card-text">Análise da Meta 12 do Plano Nacional de Educação</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Placeholder for other pages -->
+            <div id="page-content" class="page-content" style="display: none;">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <button class="btn btn-outline-primary" onclick="loadPage('home')">
+                            <i class="fas fa-arrow-left me-2"></i>Voltar ao Início
+                        </button>
+                        <div class="spinner-border text-primary" role="status" id="loading-spinner">
+                            <span class="visually-hidden">Carregando...</span>
+                        </div>
+                    </div>
+                    <div id="dynamic-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4 mt-5">
+        <div class="container">
+            <p class="text-muted mb-0">Trabalho de Mestrado - Ana Cristina da Silva - 2025</p>
+            <p class="text-muted small">Universidade Federal da Fronteira Sul - Campus Chapecó</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js Datalabels Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+    <!-- SheetJS (xlsx) para exportação para Excel -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    
+    <!-- Navigation Script -->
+    <script src="navigation_ultra_simple.js"></script>
+</body>
+</html>

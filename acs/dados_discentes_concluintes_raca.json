@@ -1,0 +1,92 @@
+[
+    {
+        "ano": 2014,
+        "branca": 699,
+        "parda": 62,
+        "preta": 16,
+        "indigena": 6,
+        "amarela": 14,
+        "naodeclarada": 1424
+    },
+    {
+        "ano": 2015,
+        "branca": 796,
+        "parda": 62,
+        "preta": 17,
+        "indigena": 3,
+        "amarela": 10,
+        "naodeclarada": 1512
+    },
+    {
+        "ano": 2016,
+        "branca": 946,
+        "parda": 110,
+        "preta": 15,
+        "indigena": 2,
+        "amarela": 14,
+        "naodeclarada": 1409
+    },
+    {
+        "ano": 2017,
+        "branca": 1269,
+        "parda": 173,
+        "preta": 23,
+        "indigena": 0,
+        "amarela": 17,
+        "naodeclarada": 1359
+    },
+    {
+        "ano": 2018,
+        "branca": 2296,
+        "parda": 252,
+        "preta": 35,
+        "indigena": 38,
+        "amarela": 28,
+        "naodeclarada": 471
+    },
+    {
+        "ano": 2019,
+        "branca": 2571,
+        "parda": 367,
+        "preta": 52,
+        "indigena": 23,
+        "amarela": 59,
+        "naodeclarada": 274
+    },
+    {
+        "ano": 2020,
+        "branca": 2350,
+        "parda": 378,
+        "preta": 43,
+        "indigena": 5,
+        "amarela": 43,
+        "naodeclarada": 157
+    },
+    {
+        "ano": 2021,
+        "branca": 2376,
+        "parda": 350,
+        "preta": 56,
+        "indigena": 7,
+        "amarela": 32,
+        "naodeclarada": 148
+    },
+    {
+        "ano": 2022,
+        "branca": 2132,
+        "parda": 302,
+        "preta": 37,
+        "indigena": 4,
+        "amarela": 36,
+        "naodeclarada": 135
+    },
+    {
+        "ano": 2023,
+        "branca": 2481,
+        "parda": 427,
+        "preta": 51,
+        "indigena": 79,
+        "amarela": 35,
+        "naodeclarada": 215
+    }
+]

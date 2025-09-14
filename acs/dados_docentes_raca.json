@@ -1,0 +1,92 @@
+[
+    {
+        "ano": 2014,
+        "branca": 1330,
+        "preta": 15,
+        "parda": 42,
+        "amarela": 6,
+        "indigena": 1,
+        "cor_nd": 48
+    },
+    {
+        "ano": 2015,
+        "branca": 1365,
+        "preta": 20,
+        "parda": 40,
+        "amarela": 9,
+        "indigena": 1,
+        "cor_nd": 55
+    },
+    {
+        "ano": 2016,
+        "branca": 1280,
+        "preta": 18,
+        "parda": 54,
+        "amarela": 8,
+        "indigena": 2,
+        "cor_nd": 79
+    },
+    {
+        "ano": 2017,
+        "branca": 1289,
+        "preta": 9,
+        "parda": 68,
+        "amarela": 9,
+        "indigena": 4,
+        "cor_nd": 61
+    },
+    {
+        "ano": 2018,
+        "branca": 1225,
+        "preta": 8,
+        "parda": 72,
+        "amarela": 5,
+        "indigena": 4,
+        "cor_nd": 72
+    },
+    {
+        "ano": 2019,
+        "branca": 1251,
+        "preta": 7,
+        "parda": 72,
+        "amarela": 6,
+        "indigena": 4,
+        "cor_nd": 86
+    },
+    {
+        "ano": 2020,
+        "branca": 1324,
+        "preta": 9,
+        "parda": 77,
+        "amarela": 8,
+        "indigena": 4,
+        "cor_nd": 39
+    },
+    {
+        "ano": 2021,
+        "branca": 1360,
+        "preta": 8,
+        "parda": 78,
+        "amarela": 9,
+        "indigena": 3,
+        "cor_nd": 42
+    },
+    {
+        "ano": 2022,
+        "branca": 1310,
+        "preta": 10,
+        "parda": 73,
+        "amarela": 10,
+        "indigena": 5,
+        "cor_nd": 29
+    },
+    {
+        "ano": 2023,
+        "branca": 1022,
+        "preta": 6,
+        "parda": 57,
+        "amarela": 9,
+        "indigena": 4,
+        "cor_nd": 34
+    }
+]

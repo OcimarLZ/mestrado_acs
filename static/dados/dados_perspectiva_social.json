@@ -1,0 +1,220 @@
+{
+    "anos": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+    ],
+    "redes": [
+        "Privada",
+        "Pública"
+    ],
+    "datasets": [
+        {
+            "label": "Apoio Social - Privada",
+            "data": [
+                2426,
+                2627,
+                2688,
+                3054,
+                2749,
+                2186,
+                1656,
+                1567,
+                1903,
+                92
+            ],
+            "variavel": "apoio_social",
+            "rede": "Privada",
+            "backgroundColor": "#000000",
+            "borderColor": "#000000",
+            "fill": false
+        },
+        {
+            "label": "Apoio Social - Pública",
+            "data": [
+                682,
+                811,
+                948,
+                1058,
+                1011,
+                867,
+                118,
+                619,
+                528,
+                817
+            ],
+            "variavel": "apoio_social",
+            "rede": "Pública",
+            "backgroundColor": "#000000",
+            "borderColor": "#000000",
+            "fill": false
+        },
+        {
+            "label": "Estudantes com Deficiência - Privada",
+            "data": [
+                9,
+                100,
+                104,
+                101,
+                125,
+                150,
+                149,
+                164,
+                192,
+                216
+            ],
+            "variavel": "deficientes",
+            "rede": "Privada",
+            "backgroundColor": "#000000",
+            "borderColor": "#000000",
+            "fill": false
+        },
+        {
+            "label": "Estudantes com Deficiência - Pública",
+            "data": [
+                120,
+                27,
+                15,
+                39,
+                45,
+                43,
+                45,
+                43,
+                41,
+                43
+            ],
+            "variavel": "deficientes",
+            "rede": "Pública",
+            "backgroundColor": "#000000",
+            "borderColor": "#000000",
+            "fill": false
+        },
+        {
+            "label": "Reserva de Vagas (Total) - Privada",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                20,
+                10,
+                6,
+                6
+            ],
+            "variavel": "reserva_vagas",
+            "rede": "Privada",
+            "backgroundColor": "#000000",
+            "borderColor": "#000000",
+            "fill": false
+        },
+        {
+            "label": "Reserva de Vagas (Total) - Pública",
+            "data": [
+                1090,
+                1416,
+                1757,
+                2070,
+                2046,
+                2239,
+                2326,
+                2467,
+                1798,
+                1519
+            ],
+            "variavel": "reserva_vagas",
+            "rede": "Pública",
+            "backgroundColor": "#000000",
+            "borderColor": "#000000",
+            "fill": false
+        },
+        {
+            "label": "Reserva Social - Privada",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "variavel": "reserva_social",
+            "rede": "Privada",
+            "backgroundColor": "#000000",
+            "borderColor": "#000000",
+            "fill": false
+        },
+        {
+            "label": "Reserva Social - Pública",
+            "data": [
+                383,
+                509,
+                657,
+                770,
+                805,
+                765,
+                715,
+                679,
+                481,
+                421
+            ],
+            "variavel": "reserva_social",
+            "rede": "Pública",
+            "backgroundColor": "#000000",
+            "borderColor": "#000000",
+            "fill": false
+        },
+        {
+            "label": "Reserva Étnica - Privada",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                20,
+                10,
+                6,
+                5
+            ],
+            "variavel": "reserva_etnica",
+            "rede": "Privada",
+            "backgroundColor": "#000000",
+            "borderColor": "#000000",
+            "fill": false
+        },
+        {
+            "label": "Reserva Étnica - Pública",
+            "data": [
+                102,
+                162,
+                202,
+                249,
+                246,
+                257,
+                271,
+                319,
+                276,
+                153
+            ],
+            "variavel": "reserva_etnica",
+            "rede": "Pública",
+            "backgroundColor": "#000000",
+            "borderColor": "#000000",
+            "fill": false
+        }
+    ]
+}

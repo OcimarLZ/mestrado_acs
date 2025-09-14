@@ -1,0 +1,182 @@
+[
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO UNIFATECIE",
+        "anos_ofertados":3,
+        "media_matriculas_anual":40.3333333333,
+        "media_cursos_ofertados_anual":17.6666666667
+    },
+    {
+        "nome_instituicao":"FACULDADE DE EDUCA\u00c7\u00c3O SUPERIOR DE CHAPEC\u00d3",
+        "anos_ofertados":7,
+        "media_matriculas_anual":15.8571428571,
+        "media_cursos_ofertados_anual":0.4285714286
+    },
+    {
+        "nome_instituicao":"UNIVERSIDADE FEDERAL DE SANTA CATARINA",
+        "anos_ofertados":6,
+        "media_matriculas_anual":16.3333333333,
+        "media_cursos_ofertados_anual":0.6666666667
+    },
+    {
+        "nome_instituicao":"UNIVERSIDADE ANHEMBI MORUMBI",
+        "anos_ofertados":4,
+        "media_matriculas_anual":23.0,
+        "media_cursos_ofertados_anual":6.0
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO DAS FACULDADES METROPOLITANAS UNIDAS",
+        "anos_ofertados":6,
+        "media_matriculas_anual":14.1666666667,
+        "media_cursos_ofertados_anual":6.1666666667
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO SENAC",
+        "anos_ofertados":6,
+        "media_matriculas_anual":13.3333333333,
+        "media_cursos_ofertados_anual":3.0
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO DAS AM\u00c9RICAS",
+        "anos_ofertados":5,
+        "media_matriculas_anual":13.2,
+        "media_cursos_ofertados_anual":3.6
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO MAUR\u00cdCIO DE NASSAU",
+        "anos_ofertados":6,
+        "media_matriculas_anual":8.0,
+        "media_cursos_ofertados_anual":2.5
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO FAVIP WYDEN",
+        "anos_ofertados":5,
+        "media_matriculas_anual":9.4,
+        "media_cursos_ofertados_anual":3.2
+    },
+    {
+        "nome_instituicao":"FACULDADE UNINA",
+        "anos_ofertados":4,
+        "media_matriculas_anual":9.25,
+        "media_cursos_ofertados_anual":2.0
+    },
+    {
+        "nome_instituicao":"UNIVERSIDADE PARANAENSE",
+        "anos_ofertados":7,
+        "media_matriculas_anual":5.1428571429,
+        "media_cursos_ofertados_anual":2.7142857143
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO DE ARARAS -",
+        "anos_ofertados":5,
+        "media_matriculas_anual":6.0,
+        "media_cursos_ofertados_anual":1.6
+    },
+    {
+        "nome_instituicao":"UNIVERSIDADE BRASIL",
+        "anos_ofertados":2,
+        "media_matriculas_anual":14.5,
+        "media_cursos_ofertados_anual":2.0
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO GUAIRAC\u00c1",
+        "anos_ofertados":3,
+        "media_matriculas_anual":9.6666666667,
+        "media_cursos_ofertados_anual":0.6666666667
+    },
+    {
+        "nome_instituicao":"UNIVERSIDADE DE MAR\u00cdLIA",
+        "anos_ofertados":1,
+        "media_matriculas_anual":27.0,
+        "media_cursos_ofertados_anual":16.0
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO UNIBTA",
+        "anos_ofertados":1,
+        "media_matriculas_anual":21.0,
+        "media_cursos_ofertados_anual":17.0
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO UNIDOM - BOSCO",
+        "anos_ofertados":1,
+        "media_matriculas_anual":19.0,
+        "media_cursos_ofertados_anual":15.0
+    },
+    {
+        "nome_instituicao":"ESCOLA SUPERIOR ABERTA DO BRASIL",
+        "anos_ofertados":5,
+        "media_matriculas_anual":3.6,
+        "media_cursos_ofertados_anual":1.0
+    },
+    {
+        "nome_instituicao":"UNIVERSIDADE LUTERANA DO BRASIL",
+        "anos_ofertados":2,
+        "media_matriculas_anual":6.0,
+        "media_cursos_ofertados_anual":3.0
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO ANHANGUERA PIT\u00c1GORAS AMPLI",
+        "anos_ofertados":4,
+        "media_matriculas_anual":2.0,
+        "media_cursos_ofertados_anual":2.0
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO DO SUL DE MINAS",
+        "anos_ofertados":2,
+        "media_matriculas_anual":4.0,
+        "media_cursos_ofertados_anual":1.5
+    },
+    {
+        "nome_instituicao":"UNIVERSIDADE POTIGUAR",
+        "anos_ofertados":5,
+        "media_matriculas_anual":1.4,
+        "media_cursos_ofertados_anual":0.6
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO UNIFECAF",
+        "anos_ofertados":1,
+        "media_matriculas_anual":6.0,
+        "media_cursos_ofertados_anual":6.0
+    },
+    {
+        "nome_instituicao":"UNIVERSIDADE UNIVERSUS VERITAS GUARULHOS",
+        "anos_ofertados":3,
+        "media_matriculas_anual":1.0,
+        "media_cursos_ofertados_anual":0.3333333333
+    },
+    {
+        "nome_instituicao":"UNIVERSIDADE LA SALLE",
+        "anos_ofertados":1,
+        "media_matriculas_anual":3.0,
+        "media_cursos_ofertados_anual":2.0
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO ADVENTISTA DE S\u00c3O PAULO",
+        "anos_ofertados":1,
+        "media_matriculas_anual":1.0,
+        "media_cursos_ofertados_anual":1.0
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO FAVENI",
+        "anos_ofertados":1,
+        "media_matriculas_anual":1.0,
+        "media_cursos_ofertados_anual":1.0
+    },
+    {
+        "nome_instituicao":"CENTRO UNIVERSIT\u00c1RIO JOAQUIM NABUCO DE RECIFE",
+        "anos_ofertados":1,
+        "media_matriculas_anual":1.0,
+        "media_cursos_ofertados_anual":4.0
+    },
+    {
+        "nome_instituicao":"FACULDADE CENSUPEG",
+        "anos_ofertados":1,
+        "media_matriculas_anual":1.0,
+        "media_cursos_ofertados_anual":3.0
+    },
+    {
+        "nome_instituicao":"FACULDADE PREPARA",
+        "anos_ofertados":1,
+        "media_matriculas_anual":0.0,
+        "media_cursos_ofertados_anual":1.0
+    }
+]

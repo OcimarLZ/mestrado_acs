@@ -1,0 +1,52 @@
+[
+    {
+        "ano": 2014,
+        "brasileiros": 1454,
+        "estrangeiros": 13
+    },
+    {
+        "ano": 2015,
+        "brasileiros": 1494,
+        "estrangeiros": 12
+    },
+    {
+        "ano": 2016,
+        "brasileiros": 1429,
+        "estrangeiros": 12
+    },
+    {
+        "ano": 2017,
+        "brasileiros": 1430,
+        "estrangeiros": 10
+    },
+    {
+        "ano": 2018,
+        "brasileiros": 1375,
+        "estrangeiros": 13
+    },
+    {
+        "ano": 2019,
+        "brasileiros": 1416,
+        "estrangeiros": 10
+    },
+    {
+        "ano": 2020,
+        "brasileiros": 1450,
+        "estrangeiros": 11
+    },
+    {
+        "ano": 2021,
+        "brasileiros": 1490,
+        "estrangeiros": 10
+    },
+    {
+        "ano": 2022,
+        "brasileiros": 1427,
+        "estrangeiros": 10
+    },
+    {
+        "ano": 2023,
+        "brasileiros": 1123,
+        "estrangeiros": 9
+    }
+]

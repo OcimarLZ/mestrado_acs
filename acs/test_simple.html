@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste Simples</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Teste do Gráfico de Modalidade</h1>
+    <div style="width: 800px; height: 400px;">
+        <canvas id="discentesIdadeIngressantesModalidadeChart"></canvas>
+    </div>
+    
+    <script>
+        console.log('Página carregada');
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM carregado, iniciando teste');
+            
+            const canvasElement = document.getElementById('discentesIdadeIngressantesModalidadeChart');
+            console.log('Canvas encontrado:', canvasElement);
+            
+            if (canvasElement) {
+                const ctx = canvasElement.getContext('2d');
+                
+                // Dados de teste simples
+                const testData = {
+                    labels: ['2018', '2019', '2020', '2021', '2022'],
+                    datasets: [{
+                        label: 'Teste',
+                        data: [10, 20, 30, 40, 50],
+                        borderColor: 'rgb(75, 192, 192)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)'
+                    }]
+                };
+                
+                new Chart(ctx, {
+                    type: 'line',
+                    data: testData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+                
+                console.log('Gráfico de teste criado');
+            } else {
+                console.error('Canvas não encontrado!');
+            }
+        });
+    </script>
+</body>
+</html>

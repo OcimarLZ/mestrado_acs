@@ -1,0 +1,82 @@
+[
+    {
+        "ano": 2014,
+        "total_docentes": 1473,
+        "docentes_em_exercicio": 1467,
+        "docentes_afastados": 6,
+        "docentes_femininos": 697,
+        "docentes_masculinos": 770
+    },
+    {
+        "ano": 2015,
+        "total_docentes": 1568,
+        "docentes_em_exercicio": 1506,
+        "docentes_afastados": 62,
+        "docentes_femininos": 734,
+        "docentes_masculinos": 772
+    },
+    {
+        "ano": 2016,
+        "total_docentes": 1535,
+        "docentes_em_exercicio": 1441,
+        "docentes_afastados": 94,
+        "docentes_femininos": 694,
+        "docentes_masculinos": 747
+    },
+    {
+        "ano": 2017,
+        "total_docentes": 1550,
+        "docentes_em_exercicio": 1440,
+        "docentes_afastados": 110,
+        "docentes_femininos": 705,
+        "docentes_masculinos": 735
+    },
+    {
+        "ano": 2018,
+        "total_docentes": 1475,
+        "docentes_em_exercicio": 1388,
+        "docentes_afastados": 87,
+        "docentes_femininos": 672,
+        "docentes_masculinos": 716
+    },
+    {
+        "ano": 2019,
+        "total_docentes": 1546,
+        "docentes_em_exercicio": 1426,
+        "docentes_afastados": 120,
+        "docentes_femininos": 712,
+        "docentes_masculinos": 714
+    },
+    {
+        "ano": 2020,
+        "total_docentes": 1466,
+        "docentes_em_exercicio": 1461,
+        "docentes_afastados": 5,
+        "docentes_femininos": 740,
+        "docentes_masculinos": 721
+    },
+    {
+        "ano": 2021,
+        "total_docentes": 1503,
+        "docentes_em_exercicio": 1500,
+        "docentes_afastados": 3,
+        "docentes_femininos": 757,
+        "docentes_masculinos": 743
+    },
+    {
+        "ano": 2022,
+        "total_docentes": 1463,
+        "docentes_em_exercicio": 1437,
+        "docentes_afastados": 26,
+        "docentes_femininos": 733,
+        "docentes_masculinos": 704
+    },
+    {
+        "ano": 2023,
+        "total_docentes": 1364,
+        "docentes_em_exercicio": 1132,
+        "docentes_afastados": 232,
+        "docentes_femininos": 565,
+        "docentes_masculinos": 567
+    }
+]

@@ -1,0 +1,217 @@
+[
+    {
+        "ano_censo":2014,
+        "categoria":"Especial",
+        "valor":1337
+    },
+    {
+        "ano_censo":2014,
+        "categoria":"Privada com fins lucrativos",
+        "valor":550
+    },
+    {
+        "ano_censo":2014,
+        "categoria":"Privada sem fins lucrativos",
+        "valor":117
+    },
+    {
+        "ano_censo":2014,
+        "categoria":"P\u00fablica Estadual",
+        "valor":83
+    },
+    {
+        "ano_censo":2014,
+        "categoria":"P\u00fablica Federal",
+        "valor":134
+    },
+    {
+        "ano_censo":2015,
+        "categoria":"Especial",
+        "valor":0
+    },
+    {
+        "ano_censo":2015,
+        "categoria":"Privada com fins lucrativos",
+        "valor":605
+    },
+    {
+        "ano_censo":2015,
+        "categoria":"Privada sem fins lucrativos",
+        "valor":1458
+    },
+    {
+        "ano_censo":2015,
+        "categoria":"P\u00fablica Estadual",
+        "valor":118
+    },
+    {
+        "ano_censo":2015,
+        "categoria":"P\u00fablica Federal",
+        "valor":219
+    },
+    {
+        "ano_censo":2016,
+        "categoria":"Especial",
+        "valor":9
+    },
+    {
+        "ano_censo":2016,
+        "categoria":"Privada com fins lucrativos",
+        "valor":693
+    },
+    {
+        "ano_censo":2016,
+        "categoria":"Privada sem fins lucrativos",
+        "valor":1469
+    },
+    {
+        "ano_censo":2016,
+        "categoria":"P\u00fablica Estadual",
+        "valor":67
+    },
+    {
+        "ano_censo":2016,
+        "categoria":"P\u00fablica Federal",
+        "valor":258
+    },
+    {
+        "ano_censo":2017,
+        "categoria":"Privada com fins lucrativos",
+        "valor":825
+    },
+    {
+        "ano_censo":2017,
+        "categoria":"Privada sem fins lucrativos",
+        "valor":1665
+    },
+    {
+        "ano_censo":2017,
+        "categoria":"P\u00fablica Estadual",
+        "valor":66
+    },
+    {
+        "ano_censo":2017,
+        "categoria":"P\u00fablica Federal",
+        "valor":285
+    },
+    {
+        "ano_censo":2018,
+        "categoria":"Privada com fins lucrativos",
+        "valor":1044
+    },
+    {
+        "ano_censo":2018,
+        "categoria":"Privada sem fins lucrativos",
+        "valor":1720
+    },
+    {
+        "ano_censo":2018,
+        "categoria":"P\u00fablica Estadual",
+        "valor":59
+    },
+    {
+        "ano_censo":2018,
+        "categoria":"P\u00fablica Federal",
+        "valor":297
+    },
+    {
+        "ano_censo":2019,
+        "categoria":"Privada com fins lucrativos",
+        "valor":1144
+    },
+    {
+        "ano_censo":2019,
+        "categoria":"Privada sem fins lucrativos",
+        "valor":1807
+    },
+    {
+        "ano_censo":2019,
+        "categoria":"P\u00fablica Estadual",
+        "valor":107
+    },
+    {
+        "ano_censo":2019,
+        "categoria":"P\u00fablica Federal",
+        "valor":288
+    },
+    {
+        "ano_censo":2020,
+        "categoria":"Privada com fins lucrativos",
+        "valor":1297
+    },
+    {
+        "ano_censo":2020,
+        "categoria":"Privada sem fins lucrativos",
+        "valor":1361
+    },
+    {
+        "ano_censo":2020,
+        "categoria":"P\u00fablica Estadual",
+        "valor":61
+    },
+    {
+        "ano_censo":2020,
+        "categoria":"P\u00fablica Federal",
+        "valor":257
+    },
+    {
+        "ano_censo":2021,
+        "categoria":"Privada com fins lucrativos",
+        "valor":1378
+    },
+    {
+        "ano_censo":2021,
+        "categoria":"Privada sem fins lucrativos",
+        "valor":1245
+    },
+    {
+        "ano_censo":2021,
+        "categoria":"P\u00fablica Estadual",
+        "valor":33
+    },
+    {
+        "ano_censo":2021,
+        "categoria":"P\u00fablica Federal",
+        "valor":313
+    },
+    {
+        "ano_censo":2022,
+        "categoria":"Privada com fins lucrativos",
+        "valor":1103
+    },
+    {
+        "ano_censo":2022,
+        "categoria":"Privada sem fins lucrativos",
+        "valor":1177
+    },
+    {
+        "ano_censo":2022,
+        "categoria":"P\u00fablica Estadual",
+        "valor":108
+    },
+    {
+        "ano_censo":2022,
+        "categoria":"P\u00fablica Federal",
+        "valor":258
+    },
+    {
+        "ano_censo":2023,
+        "categoria":"Privada com fins lucrativos",
+        "valor":1545
+    },
+    {
+        "ano_censo":2023,
+        "categoria":"Privada sem fins lucrativos",
+        "valor":1358
+    },
+    {
+        "ano_censo":2023,
+        "categoria":"P\u00fablica Estadual",
+        "valor":58
+    },
+    {
+        "ano_censo":2023,
+        "categoria":"P\u00fablica Federal",
+        "valor":327
+    }
+]

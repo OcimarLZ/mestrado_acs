@@ -1,0 +1,85 @@
+/* Estilo Acadêmico */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+header h1 {
+    font-weight: bold;
+}
+
+
+
+.chart-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.chart-commentary {
+    font-size: 1rem;
+    color: #495057;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+.container-main {
+    max-width: 1200px; /* Define a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo na página */
+    padding: 0 15px; /* Adiciona um padding horizontal para evitar que o conteúdo cole nas bordas */
+}
+
+.hero-section {
+    /* Estilos para a seção hero, se necessário */
+    text-align: left; /* Alinha o texto à esquerda por padrão */
+}
+
+/* Ajustes para garantir que o conteúdo dentro do container-main respeite o alinhamento */
+.container .text-justify {
+    text-align: justify;
+}
+
+.container .text-center {
+    text-align: center;
+}
+
+/* Custom class for right alignment */
+.text-end {
+    text-align: right;
+}
+
+.chart-container {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
+    height: 500px; /* Altura fixa para evitar crescimento dinâmico */
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Container específico para tabelas com altura dinâmica */
+.table-container {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
+    min-height: 200px;
+    max-height: none;
+    overflow-y: auto;
+    position: relative;
+}
+
+canvas {
+    display: block;
+    width: 100% !important;
+    height: 450px !important; /* Altura fixa para o canvas */
+    max-height: 450px !important;
+}

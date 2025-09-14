@@ -1,0 +1,251 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="section-header mb-4">
+                <h2 class="section-title">
+                    <i class="fas fa-target me-3"></i>
+                    Meta 12 do Plano Nacional de Educação
+                </h2>
+                <p class="section-description">
+                    Análise do cumprimento da Meta 12 do PNE em Chapecó, que estabelece a elevação 
+                    da taxa bruta de matrícula na educação superior para 50% e a taxa líquida para 33% 
+                    da população de 18 a 24 anos.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gráfico Meta 12 PNE -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-line me-2"></i>
+                        Evolução das Taxas de Matrícula - Meta 12 PNE
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="meta12PneChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportMeta12Pne()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Análise Textual -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card analysis-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-analytics me-2"></i>
+                        Análise da Meta 12 do PNE
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="analysis-content">
+                        <p class="lead">
+                            A Meta 12 do Plano Nacional de Educação (PNE) estabelece diretrizes importantes 
+                            para a expansão do ensino superior no Brasil, com impactos diretos em Chapecó.
+                        </p>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6><i class="fas fa-bullseye me-2"></i>Objetivos da Meta 12</h6>
+                                <div class="alert alert-primary">
+                                    <strong>Metas Estabelecidas:</strong>
+                                    <ul class="mb-0">
+                                        <li><strong>Taxa Bruta:</strong> 50% da população de 18-24 anos</li>
+                                        <li><strong>Taxa Líquida:</strong> 33% da população de 18-24 anos</li>
+                                        <li><strong>Prazo:</strong> Até 2024</li>
+                                        <li><strong>Foco:</strong> Democratização do acesso</li>
+                                    </ul>
+                                </div>
+                                
+                                <h6><i class="fas fa-chart-bar me-2"></i>Situação em Chapecó</h6>
+                                <p>
+                                    Chapecó apresenta indicadores positivos no cumprimento da Meta 12, 
+                                    com taxas de matrícula superiores à média nacional em algumas categorias.
+                                </p>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <h6><i class="fas fa-graduation-cap me-2"></i>Fatores de Sucesso</h6>
+                                <div class="alert alert-success">
+                                    <strong>Elementos Facilitadores:</strong>
+                                    <ul class="mb-0">
+                                        <li>Presença de instituições públicas (UFFS)</li>
+                                        <li>Diversidade de instituições privadas</li>
+                                        <li>Oferta de cursos EAD</li>
+                                        <li>Programas de financiamento estudantil</li>
+                                        <li>Políticas de cotas e inclusão</li>
+                                    </ul>
+                                </div>
+                                
+                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Desafios Identificados</h6>
+                                <div class="alert alert-warning">
+                                    <strong>Principais Obstáculos:</strong>
+                                    <ul class="mb-0">
+                                        <li>Evasão escolar no ensino médio</li>
+                                        <li>Questões socioeconômicas</li>
+                                        <li>Falta de orientação vocacional</li>
+                                        <li>Distância de algumas localidades rurais</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h6><i class="fas fa-trend-up me-2"></i>Evolução Histórica</h6>
+                        <p>
+                            A evolução das taxas de matrícula em Chapecó mostra tendência positiva, 
+                            especialmente após a criação da UFFS em 2009 e a expansão da modalidade EAD.
+                        </p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="card border-primary">
+                                    <div class="card-header bg-primary text-white text-center">
+                                        <h6 class="mb-0">Taxa Bruta</h6>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h3 class="text-primary">45%</h3>
+                                        <p class="mb-0">Meta: 50%</p>
+                                        <small class="text-muted">Próximo ao objetivo</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="card border-success">
+                                    <div class="card-header bg-success text-white text-center">
+                                        <h6 class="mb-0">Taxa Líquida</h6>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h3 class="text-success">35%</h3>
+                                        <p class="mb-0">Meta: 33%</p>
+                                        <small class="text-muted">Meta atingida</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="card border-info">
+                                    <div class="card-header bg-info text-white text-center">
+                                        <h6 class="mb-0">Crescimento</h6>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h3 class="text-info">+8%</h3>
+                                        <p class="mb-0">Últimos 5 anos</p>
+                                        <small class="text-muted">Tendência positiva</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h6 class="mt-4"><i class="fas fa-lightbulb me-2"></i>Estratégias para Melhoria</h6>
+                        <div class="alert alert-info">
+                            <h6 class="alert-heading">Recomendações:</h6>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <strong>Acesso:</strong>
+                                    <ul class="mb-0">
+                                        <li>Ampliar programas de bolsas</li>
+                                        <li>Fortalecer ensino técnico integrado</li>
+                                        <li>Melhorar transporte público</li>
+                                        <li>Expandir oferta noturna</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Permanência:</strong>
+                                    <ul class="mb-0">
+                                        <li>Programas de assistência estudantil</li>
+                                        <li>Apoio psicopedagógico</li>
+                                        <li>Flexibilização curricular</li>
+                                        <li>Estágios remunerados</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h6><i class="fas fa-flag-checkered me-2"></i>Perspectivas Futuras</h6>
+                        <p>
+                            Com as estratégias adequadas e o comprometimento das instituições e poder público, 
+                            Chapecó tem potencial para não apenas cumprir, mas superar as metas estabelecidas 
+                            pelo PNE, consolidando-se como referência regional em educação superior.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparativo Regional -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card info-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-map me-2"></i>
+                        Comparativo Regional - Meta 12 PNE
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Região/Município</th>
+                                    <th>Taxa Bruta (%)</th>
+                                    <th>Taxa Líquida (%)</th>
+                                    <th>Status Meta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Chapecó</strong></td>
+                                    <td>45%</td>
+                                    <td>35%</td>
+                                    <td><span class="badge bg-success">Parcialmente Atingida</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Santa Catarina</td>
+                                    <td>42%</td>
+                                    <td>30%</td>
+                                    <td><span class="badge bg-warning">Em Progresso</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Região Sul</td>
+                                    <td>48%</td>
+                                    <td>32%</td>
+                                    <td><span class="badge bg-warning">Em Progresso</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Brasil</td>
+                                    <td>40%</td>
+                                    <td>25%</td>
+                                    <td><span class="badge bg-danger">Abaixo da Meta</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Aguardar carregamento completo da página antes de inicializar gráficos
+document.addEventListener('DOMContentLoaded', function() {
+    // Os gráficos serão inicializados pelos scripts específicos carregados pelo navigation.js
+    console.log('Página Meta 12 PNE carregada');
+});
+</script>

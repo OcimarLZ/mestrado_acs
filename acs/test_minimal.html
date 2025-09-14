@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Mínimo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .hidden { display: none; }
+        .visible { display: block; }
+        #loading { color: blue; }
+        #error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Teste Mínimo de Navegação</h1>
+    
+    <button onclick="testClick('ies-perfil')">Testar IES Perfil</button>
+    <button onclick="testClick('discentes')">Testar Discentes</button>
+    <button onclick="showConsoleInfo()">Mostrar Info Console</button>
+    
+    <div id="home-content" class="visible">
+        <h2>Conteúdo Home</h2>
+        <p>Esta é a página inicial. Clique nos botões para testar.</p>
+    </div>
+    
+    <div id="page-content" class="hidden">
+        <div id="loading-spinner">Carregando...</div>
+        <div id="dynamic-content"></div>
+    </div>
+    
+    <div id="debug-info">
+        <h3>Debug Info:</h3>
+        <div id="debug-output"></div>
+    </div>
+    
+    <script>
+        console.log('=== SCRIPT INICIADO ===');
+        
+        function showConsoleInfo() {
+            console.log('=== INFORMAÇÕES DO CONSOLE ===');
+            console.log('Document ready state:', document.readyState);
+            console.log('Window loaded:', window.loaded || 'não definido');
+            
+            var elements = {
+                'home-content': document.getElementById('home-content'),
+                'page-content': document.getElementById('page-content'),
+                'dynamic-content': document.getElementById('dynamic-content'),
+                'loading-spinner': document.getElementById('loading-spinner')
+            };
+            
+            console.log('Elementos DOM:', elements);
+            
+            var debugOutput = document.getElementById('debug-output');
+            var info = 'Document ready: ' + document.readyState + '<br>';
+            
+            for (var id in elements) {
+                info += id + ': ' + (elements[id] ? 'ENCONTRADO' : 'NÃO ENCONTRADO') + '<br>';
+            }
+            
+            debugOutput.innerHTML = info;
+        }
+        
+        function testClick(pageId) {
+            console.log('=== TESTE CLICK ===', pageId);
+            
+            var debugOutput = document.getElementById('debug-output');
+            debugOutput.innerHTML = 'Clique detectado para: ' + pageId + '<br>';
+            
+            // Verificar elementos
+            var homeContent = document.getElementById('home-content');
+            var pageContent = document.getElementById('page-content');
+            var dynamicContent = document.getElementById('dynamic-content');
+            var loadingSpinner = document.getElementById('loading-spinner');
+            
+            if (!homeContent || !pageContent || !dynamicContent || !loadingSpinner) {
+                console.error('ERRO: Elementos não encontrados!');
+                debugOutput.innerHTML += 'ERRO: Elementos DOM não encontrados!<br>';
+                return;
+            }
+            
+            console.log('Elementos encontrados, prosseguindo...');
+            debugOutput.innerHTML += 'Elementos encontrados OK<br>';
+            
+            // Mostrar loading
+            homeContent.className = 'hidden';
+            pageContent.className = 'visible';
+            loadingSpinner.style.display = 'block';
+            dynamicContent.innerHTML = '';
+            
+            debugOutput.innerHTML += 'Loading exibido<br>';
+            
+            // Simular carregamento
+            setTimeout(function() {
+                console.log('Simulando carregamento concluído');
+                loadingSpinner.style.display = 'none';
+                dynamicContent.innerHTML = '<h2>Página: ' + pageId + '</h2><p>Conteúdo carregado com sucesso!</p>';
+                debugOutput.innerHTML += 'Conteúdo carregado!<br>';
+            }, 1000);
+        }
+        
+        // Mostrar info inicial
+        window.onload = function() {
+            console.log('=== WINDOW ONLOAD ===');
+            window.loaded = true;
+            showConsoleInfo();
+        };
+        
+        console.log('=== SCRIPT FINALIZADO ===');
+    </script>
+</body>
+</html>

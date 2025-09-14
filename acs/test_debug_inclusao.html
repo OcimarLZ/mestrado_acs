@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Inclusão Matriculados</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Debug Gráfico Inclusão Matriculados</h1>
+    <div id="debug-info"></div>
+    <canvas id="inclusaoMatriculadosChart" width="800" height="400"></canvas>
+    
+    <script>
+        console.log('Iniciando debug...');
+        
+        // Verificar se Chart.js está carregado
+        console.log('Chart.js disponível:', typeof Chart !== 'undefined');
+        
+        // Verificar se o canvas existe
+        const canvas = document.getElementById('inclusaoMatriculadosChart');
+        console.log('Canvas encontrado:', canvas !== null);
+        
+        // Verificar se o arquivo JSON existe
+        fetch('dados_inclusao_matriculados.json')
+            .then(response => {
+                console.log('Resposta do JSON:', response.status);
+                return response.json();
+            })
+            .then(data => {
+                console.log('Dados carregados:', data);
+                
+                // Criar gráfico simples
+                if (canvas && typeof Chart !== 'undefined') {
+                    const ctx = canvas.getContext('2d');
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: data.anos || ['2014', '2015', '2016'],
+                            datasets: [{
+                                label: 'Teste',
+                                data: [100, 200, 300],
+                                borderColor: 'rgb(75, 192, 192)',
+                                tension: 0.1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'Teste Debug'
+                                }
+                            }
+                        }
+                    });
+                    console.log('Gráfico criado com sucesso!');
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao carregar dados:', error);
+            });
+    </script>
+</body>
+</html>

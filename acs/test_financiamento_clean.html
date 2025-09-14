@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Gráficos Financiamento - Limpo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { display: flex; gap: 20px; }
+        .chart-section { flex: 1; border: 1px solid #ccc; padding: 20px; }
+        .chart-container { position: relative; height: 400px; }
+        .debug { background: #f0f0f0; padding: 10px; margin: 10px 0; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>Teste Comparativo - Gráficos de Financiamento (Versão Limpa)</h1>
+    
+    <div class="debug" id="debug-info">
+        <strong>Debug Info:</strong><br>
+        Chart.js carregado: <span id="chartjs-status">Verificando...</span><br>
+        Canvas Ingressantes: <span id="canvas-ingressantes-status">Verificando...</span><br>
+        Canvas Matriculados: <span id="canvas-matriculados-status">Verificando...</span>
+    </div>
+    
+    <div class="container">
+        <div class="chart-section">
+            <h2>Financiamento dos Ingressantes</h2>
+            <div class="chart-container">
+                <canvas id="financiamentoIngressantesChart"></canvas>
+            </div>
+        </div>
+        
+        <div class="chart-section">
+            <h2>Financiamento dos Matriculados</h2>
+            <div class="chart-container">
+                <canvas id="financiamentoMatriculadosChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Debug inicial
+        document.getElementById('chartjs-status').textContent = typeof Chart !== 'undefined' ? 'SIM' : 'NÃO';
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verificar canvases
+            const canvasIngressantes = document.getElementById('financiamentoIngressantesChart');
+            const canvasMatriculados = document.getElementById('financiamentoMatriculadosChart');
+            
+            document.getElementById('canvas-ingressantes-status').textContent = canvasIngressantes ? 'ENCONTRADO' : 'NÃO ENCONTRADO';
+            document.getElementById('canvas-matriculados-status').textContent = canvasMatriculados ? 'ENCONTRADO' : 'NÃO ENCONTRADO';
+            
+            // Carregar gráfico de ingressantes
+            if (canvasIngressantes && typeof Chart !== 'undefined') {
+                fetch('dados_financiamento_ingressantes.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const ctx = canvasIngressantes.getContext('2d');
+                        const datasets = data.datasets.map((dataset, index) => ({
+                            label: dataset.label,
+                            data: dataset.data,
+                            backgroundColor: `rgba(${255 - index * 50}, ${99 + index * 50}, 132, 0.7)`
+                        }));
+                        
+                        new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: data.anos,
+                                datasets: datasets
+                            },
+                            options: {
+                                responsive: true,
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                        text: 'Financiamento dos Ingressantes'
+                                    }
+                                },
+                                scales: {
+                                    x: { stacked: true },
+                                    y: { stacked: true }
+                                }
+                            }
+                        });
+                        console.log('Gráfico de ingressantes carregado com sucesso!');
+                    })
+                    .catch(error => console.error('Erro no gráfico de ingressantes:', error));
+            }
+            
+            // Carregar gráfico de matriculados
+            if (canvasMatriculados && typeof Chart !== 'undefined') {
+                fetch('dados_financiamento_matriculados.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const ctx = canvasMatriculados.getContext('2d');
+                        const datasets = data.datasets.map((dataset, index) => ({
+                            label: dataset.label,
+                            data: dataset.data,
+                            borderColor: `rgba(${54 + index * 50}, 162, ${235 - index * 50}, 1)`,
+                            backgroundColor: `rgba(${54 + index * 50}, 162, ${235 - index * 50}, 0.2)`,
+                            fill: false
+                        }));
+                        
+                        new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: data.anos,
+                                datasets: datasets
+                            },
+                            options: {
+                                responsive: true,
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                        text: 'Financiamento dos Matriculados'
+                                    }
+                                }
+                            }
+                        });
+                        console.log('Gráfico de matriculados carregado com sucesso!');
+                    })
+                    .catch(error => console.error('Erro no gráfico de matriculados:', error));
+            }
+        });
+    </script>
+</body>
+</html>

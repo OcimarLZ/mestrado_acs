@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+
+{% block title %}Visualizar Resultados - Sistema de Relatórios INEP{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="h3 mb-4">
+            <i class="fas fa-eye me-2"></i>
+            Visualizar Resultados
+        </h1>
+        
+        <div class="alert alert-info">
+            <i class="fas fa-info-circle me-2"></i>
+            <strong>Informação:</strong> Esta página permite visualizar os arquivos gerados pelos relatórios.
+            Os arquivos são salvos nas pastas <code>docs/tabelas/</code> e <code>docs/graficos/</code>.
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Tabelas HTML -->
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">
+                    <i class="fas fa-table me-2"></i>
+                    Tabelas HTML Geradas
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group" id="tabelasList">
+                    <div class="text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Carregando...</span>
+                        </div>
+                        <p class="mt-2">Carregando tabelas...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Gráficos PNG -->
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">
+                    <i class="fas fa-chart-bar me-2"></i>
+                    Gráficos PNG Gerados
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group" id="graficosList">
+                    <div class="text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Carregando...</span>
+                        </div>
+                        <p class="mt-2">Carregando gráficos...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para visualizar arquivo -->
+<div class="modal fade" id="visualizarModal" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Visualizar Arquivo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Conteúdo será preenchido via JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary" id="downloadBtn" download>
+                    <i class="fas fa-download me-1"></i>Download
+                </a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Função para carregar lista de arquivos
+function carregarArquivos() {
+    carregarTabelas();
+    carregarGraficos();
+}
+
+// Função para carregar tabelas HTML
+function carregarTabelas() {
+    const tabelasList = document.getElementById('tabelasList');
+    
+    fetch('/listar_arquivos/tabela')
+        .then(response => response.json())
+        .then(tabelas => {
+            let html = '';
+            if (tabelas.length > 0) {
+                tabelas.forEach(tabela => {
+                    html += `
+                        <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fas fa-file-code me-2 text-primary"></i>
+                                ${tabela}
+                            </div>
+                            <button class="btn btn-sm btn-outline-primary" onclick="visualizarArquivo('tabela', '${tabela}', 'html')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    `;
+                });
+            } else {
+                html = '<div class="text-center text-muted">Nenhuma tabela encontrada</div>';
+            }
+            tabelasList.innerHTML = html;
+        })
+        .catch(error => {
+            tabelasList.innerHTML = `
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    Erro ao carregar tabelas: ${error.message}
+                </div>
+            `;
+        });
+}
+
+// Função para carregar gráficos PNG
+function carregarGraficos() {
+    const graficosList = document.getElementById('graficosList');
+    
+    fetch('/listar_arquivos/grafico')
+        .then(response => response.json())
+        .then(graficos => {
+            let html = '';
+            if (graficos.length > 0) {
+                graficos.forEach(grafico => {
+                    html += `
+                        <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fas fa-chart-bar me-2 text-success"></i>
+                                ${grafico}
+                            </div>
+                            <button class="btn btn-sm btn-outline-success" onclick="visualizarArquivo('grafico', '${grafico}', 'image')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    `;
+                });
+            } else {
+                html = '<div class="text-center text-muted">Nenhum gráfico encontrado</div>';
+            }
+            graficosList.innerHTML = html;
+        })
+        .catch(error => {
+            graficosList.innerHTML = `
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    Erro ao carregar gráficos: ${error.message}
+                </div>
+            `;
+        });
+}
+
+// Função para visualizar arquivo
+function visualizarArquivo(tipo, nome, formato) {
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    const downloadBtn = document.getElementById('downloadBtn');
+    
+    modalTitle.textContent = `Visualizar: ${nome}`;
+    downloadBtn.href = `/arquivo/${tipo}/${nome}`;
+    downloadBtn.download = nome;
+    
+    if (formato === 'html') {
+        // Para arquivos HTML, carregar o conteúdo
+        fetch(`/arquivo/${tipo}/${nome}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(html => {
+                modalBody.innerHTML = `
+                    <div style="max-height: 500px; overflow-y: auto;">
+                        ${html}
+                    </div>
+                `;
+            })
+            .catch(error => {
+                modalBody.innerHTML = `
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        Erro ao carregar arquivo: ${error.message}
+                    </div>
+                `;
+            });
+    } else if (formato === 'image') {
+        // Para imagens, mostrar a imagem
+        modalBody.innerHTML = `
+            <div class="text-center">
+                <img src="/arquivo/${tipo}/${nome}" class="img-fluid" alt="${nome}" style="max-height: 500px; max-width: 100%;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div style="display: none; color: red; padding: 20px;">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    Erro ao carregar imagem. Verifique se o arquivo existe.
+                </div>
+            </div>
+        `;
+    }
+    
+    new bootstrap.Modal(document.getElementById('visualizarModal')).show();
+}
+
+// Carregar arquivos quando a página carregar
+document.addEventListener('DOMContentLoaded', carregarArquivos);
+</script>
+{% endblock %} 

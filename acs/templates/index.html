@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Educação Superior em Chapecó (2014-2024)</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <i class="fas fa-graduation-cap me-2"></i>
+                Educação Superior - Chapecó
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('home') }}">
+                            <i class="fas fa-home me-1"></i>Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('show_page', page_id='ies-perfil') }}">
+                            <i class="fas fa-university me-1"></i>4.1 Perfil das IES
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('show_page', page_id='areas-conhecimento') }}">
+                            <i class="fas fa-chart-bar me-1"></i>4.2 Áreas de Conhecimento
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('show_page', page_id='cursos-superiores') }}">
+                            <i class="fas fa-book me-1"></i>4.3 Cursos Superiores
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('show_page', page_id='docentes-tecnicos') }}">
+                            <i class="fas fa-chalkboard-teacher me-1"></i>4.6 Docentes e Técnicos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('show_page', page_id='discentes') }}">
+                            <i class="fas fa-user-graduate me-1"></i>Discentes
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid" style="margin-top: 76px;">
+        <div class="container">
+            <header class="text-center mb-5 py-5">
+                <h1 class="display-5 text-primary">A EDUCAÇÃO SUPERIOR NO CONTEXTO DO PLANO NACIONAL DE EDUCAÇÃO</h1>
+                <h2 class="h4 text-secondary">ANÁLISE DAS DINÂMICAS NO MUNICÍPIO DE CHAPECÓ (2014-2024)</h2>
+
+                <div class="mt-5">
+                    <p class="mb-0 fw-bold">UNIVERSIDADE FEDERAL DA FRONTEIRA SUL</p>
+                    <p class="mb-0">CAMPUS CHAPECÓ</p>
+                    <p class="mb-3">CURSO DE MESTRADO EM EDUCAÇÃO</p>
+
+                    <p class="mt-4 mb-1 fs-5"><strong>ANA CRISTINA DA SILVA</strong></p>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <p class="small text-muted">
+                                Dissertação apresentada ao Programa de Pós-Graduação em Educação da Universidade Federal da Fronteira Sul (UFFS), como requisito parcial para obtenção do título de Mestre em Educação.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <p class="mt-3 mb-0"><strong>Linha de Pesquisa:</strong> Políticas Educacionais</p>
+                    <p><strong>Orientador:</strong> Prof. Dr. Joviles Vitório Trevisol</p>
+
+                    <p class="mt-4">CHAPECÓ<br>2025</p>
+                </div>
+            </header>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-4">Capítulo 4</h3>
+                            <h4 class="text-center mb-4">Indicadores da Educação Superior em Chapecó: Um Retrato da Expansão na Vigência do PNE (2014-2024)</h4>
+                            
+                            <h5 class="mb-3">Introdução</h5>
+                            <p class="text-justify">Este capítulo dedica-se a sistematizar e analisar os indicadores quantitativos da educação superior em Chapecó, com foco no período de vigência do Plano Nacional de Educação (2014-2024). O objetivo é fornecer um panorama detalhado da evolução do setor na última década.</p>
+                            <p class="text-justify">Toda a análise empírica apresentada é fundamentada nos microdados do Censo da Educação Superior, coletados e disponibilizados anualmente pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP). Essa base de dados oficial garante a robustez e a confiabilidade das informações aqui consolidadas.</p>
+                            <p class="text-justify">Para atingir tal objetivo, o capítulo está estruturado em quatro seções principais. A primeira traça o perfil das Instituições de Educação Superior (IES) em operação no município. A segunda analisa as características do corpo docente. A terceira se debruça sobre a oferta de cursos de graduação. Por fim, a quarta e mais densa seção detalha o perfil do corpo discente, investigando as dinâmicas de acesso e permanência. O capítulo se encerra com uma síntese analítica que dialoga diretamente com as metas do PNE.</p>
+                            <p class="text-justify">Dessa forma, os dados aqui apresentados fornecerão a base empírica para responder às questões centrais desta dissertação, investigando as dinâmicas de expansão da educação superior em Chapecó e seu alinhamento (ou desalinhamento) com as políticas nacionais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Cards -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="text-center mb-4">Navegue pelas Seções</h3>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <a href="{{ url_for('show_page', page_id='ies-perfil') }}" class="text-decoration-none">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-university fa-3x text-primary mb-3"></i>
+                                <h5 class="card-title">4.1 Perfil das IES</h5>
+                                <p class="card-text">Análise das Instituições de Ensino Superior em operação em Chapecó</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <a href="{{ url_for('show_page', page_id='areas-conhecimento') }}" class="text-decoration-none">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-brain fa-3x text-success mb-3"></i>
+                                <h5 class="card-title">4.2 Áreas de Conhecimento</h5>
+                                <p class="card-text">Dinâmicas da educação superior por área de conhecimento</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <a href="{{ url_for('show_page', page_id='cursos-superiores') }}" class="text-decoration-none">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-book fa-3x text-info mb-3"></i>
+                                <h5 class="card-title">4.3 Cursos Superiores</h5>
+                                <p class="card-text">Análise sobre os cursos superiores em Chapecó</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <a href="{{ url_for('show_page', page_id='docentes-tecnicos') }}" class="text-decoration-none">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-chalkboard-teacher fa-3x text-warning mb-3"></i>
+                                <h5 class="card-title">4.6 Docentes e Técnicos</h5>
+                                <p class="card-text">Análise do corpo docente e técnico das IES</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <a href="{{ url_for('show_page', page_id='discentes') }}" class="text-decoration-none">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-user-graduate fa-3x text-danger mb-3"></i>
+                                <h5 class="card-title">Discentes</h5>
+                                <p class="card-text">Perfil e dinâmicas do corpo discente</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <a href="{{ url_for('show_page', page_id='meta12-pne') }}" class="text-decoration-none">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-chart-line fa-3x text-secondary mb-3"></i>
+                                <h5 class="card-title">Meta 12 PNE</h5>
+                                <p class="card-text">Análise da Meta 12 do Plano Nacional de Educação</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4 mt-5">
+        <div class="container">
+            <p class="text-muted mb-0">Trabalho de Mestrado - Ana Cristina da Silva - 2025</p>
+            <p class="text-muted small">Universidade Federal da Fronteira Sul - Campus Chapecó</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Debug - Gráfico Origem Escola Categoria</h1>
+    <div style="width: 800px; height: 400px;">
+        <canvas id="discentesOrigemEscolaCategoriaChart"></canvas>
+    </div>
+    
+    <script>
+        console.log('Página carregada');
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM carregado');
+            
+            // Verificar se Chart.js está disponível
+            if (typeof Chart === 'undefined') {
+                console.error('Chart.js não está carregado!');
+                return;
+            }
+            console.log('Chart.js disponível');
+            
+            // Verificar se o canvas existe
+            const canvas = document.getElementById('discentesOrigemEscolaCategoriaChart');
+            if (!canvas) {
+                console.error('Canvas não encontrado!');
+                return;
+            }
+            console.log('Canvas encontrado:', canvas);
+            
+            // Tentar carregar os dados
+            console.log('Iniciando fetch dos dados...');
+            fetch('dados_discentes_origem_escola_categoria.json')
+                .then(response => {
+                    console.log('Response status:', response.status);
+                    if (!response.ok) {
+                        throw new Error('Erro ao carregar dados: ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Dados carregados com sucesso:', data);
+                    
+                    const anos = data.anos;
+                    const datasets = data.datasets.map((dataset, index) => {
+                        const colors = [
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 99, 132)',
+                            'rgb(75, 192, 192)',
+                            'rgb(255, 205, 86)',
+                            'rgb(153, 102, 255)',
+                            'rgb(255, 159, 64)',
+                            'rgb(199, 199, 199)',
+                            'rgb(83, 102, 255)'
+                        ];
+                        const colorIndex = index % colors.length;
+                        return {
+                            label: dataset.label,
+                            data: dataset.data,
+                            borderColor: colors[colorIndex],
+                            backgroundColor: colors[colorIndex] + '33',
+                            tension: 0.1
+                        };
+                    });
+                    
+                    console.log('Datasets processados:', datasets);
+                    
+                    const ctx = canvas.getContext('2d');
+                    console.log('Contexto obtido:', ctx);
+                    
+                    console.log('Criando gráfico...');
+                    const chart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: anos,
+                            datasets: datasets
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    position: 'top',
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Origem dos Discentes por Tipo de Escola e Categoria Administrativa da IES'
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    title: {
+                                        display: true,
+                                        text: 'Ano'
+                                    }
+                                },
+                                y: {
+                                    title: {
+                                        display: true,
+                                        text: 'Quantidade de Matrículas'
+                                    }
+                                }
+                            }
+                        }
+                    });
+                    
+                    console.log('Gráfico criado com sucesso:', chart);
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar ou processar dados:', error);
+                });
+        });
+    </script>
+</body>
+</html>

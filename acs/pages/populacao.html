@@ -1,0 +1,335 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="section-header mb-4">
+                <h2 class="section-title">
+                    <i class="fas fa-city me-3"></i>
+                    Evolução da População de Chapecó
+                </h2>
+                <p class="section-description">
+                    Análise da evolução demográfica de Chapecó e sua relação com o desenvolvimento
+                    da educação superior na região, incluindo projeções e impactos socioeconômicos.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gráfico População Chapecó -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-area me-2"></i>
+                        Evolução da População de Chapecó (2010-2024)
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="populacaoCapecoChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportPopulacaoChapeco()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Análise Textual -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card analysis-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-line me-2"></i>
+                        Análise Demográfica de Chapecó
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="analysis-content">
+                        <p class="lead">
+                            A evolução populacional de Chapecó está diretamente relacionada ao desenvolvimento 
+                            da educação superior na região, criando um ciclo virtuoso de crescimento e qualificação.
+                        </p>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6><i class="fas fa-chart-line me-2"></i>Crescimento Populacional</h6>
+                                <p>
+                                    Chapecó apresenta crescimento populacional consistente, consolidando-se 
+                                    como o principal centro urbano do Oeste de Santa Catarina. Este crescimento 
+                                    é impulsionado pela migração interna e pelo desenvolvimento econômico regional.
+                                </p>
+                                
+                                <div class="alert alert-primary">
+                                    <strong>Dados Demográficos:</strong>
+                                    <ul class="mb-0">
+                                        <li><strong>2010:</strong> 183.530 habitantes</li>
+                                        <li><strong>2020:</strong> 224.013 habitantes</li>
+                                        <li><strong>2024:</strong> 235.000 habitantes (estimativa)</li>
+                                        <li><strong>Crescimento:</strong> +28% em 14 anos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <h6><i class="fas fa-graduation-cap me-2"></i>Impacto na Educação Superior</h6>
+                                <p>
+                                    O crescimento populacional gera maior demanda por educação superior, 
+                                    ao mesmo tempo que a presença de instituições de ensino atrai novos 
+                                    moradores e investimentos para a região.
+                                </p>
+                                
+                                <div class="alert alert-success">
+                                    <strong>Relação População-Educação:</strong>
+                                    <ul class="mb-0">
+                                        <li>Maior demanda por vagas</li>
+                                        <li>Atração de estudantes regionais</li>
+                                        <li>Desenvolvimento de mão de obra qualificada</li>
+                                        <li>Crescimento do setor de serviços</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h6><i class="fas fa-users me-2"></i>Perfil Demográfico</h6>
+                        <p>
+                            A população de Chapecó apresenta características favoráveis ao desenvolvimento 
+                            da educação superior, com significativa parcela de jovens e adultos em idade 
+                            universitária.
+                        </p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="card border-info">
+                                    <div class="card-header bg-info text-white text-center">
+                                        <h6 class="mb-0">Faixa 18-24 anos</h6>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h3 class="text-info">18.500</h3>
+                                        <p class="mb-0">Jovens em idade universitária</p>
+                                        <small class="text-muted">8% da população total</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="card border-warning">
+                                    <div class="card-header bg-warning text-dark text-center">
+                                        <h6 class="mb-0">Faixa 25-34 anos</h6>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h3 class="text-warning">32.000</h3>
+                                        <p class="mb-0">Adultos jovens</p>
+                                        <small class="text-muted">14% da população total</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="card border-success">
+                                    <div class="card-header bg-success text-white text-center">
+                                        <h6 class="mb-0">População Ativa</h6>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h3 class="text-success">150.000</h3>
+                                        <p class="mb-0">Em idade produtiva</p>
+                                        <small class="text-muted">64% da população total</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h6 class="mt-4"><i class="fas fa-industry me-2"></i>Desenvolvimento Econômico</h6>
+                        <p>
+                            O crescimento populacional está associado ao desenvolvimento de setores 
+                            estratégicos que demandam mão de obra qualificada:
+                        </p>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="alert alert-info">
+                                    <h6 class="alert-heading">
+                                        <i class="fas fa-cogs me-2"></i>
+                                        Setores em Crescimento
+                                    </h6>
+                                    <ul class="mb-0">
+                                        <li><strong>Agronegócio:</strong> Processamento de alimentos</li>
+                                        <li><strong>Tecnologia:</strong> Startups e empresas de TI</li>
+                                        <li><strong>Saúde:</strong> Hospitais e clínicas especializadas</li>
+                                        <li><strong>Educação:</strong> Instituições de ensino</li>
+                                        <li><strong>Serviços:</strong> Comércio e prestação de serviços</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="alert alert-warning">
+                                    <h6 class="alert-heading">
+                                        <i class="fas fa-chart-bar me-2"></i>
+                                        Indicadores Socioeconômicos
+                                    </h6>
+                                    <ul class="mb-0">
+                                        <li><strong>PIB per capita:</strong> R$ 45.000 (2023)</li>
+                                        <li><strong>IDH:</strong> 0,790 (Alto)</li>
+                                        <li><strong>Taxa de alfabetização:</strong> 96%</li>
+                                        <li><strong>Renda média:</strong> R$ 3.200</li>
+                                        <li><strong>Desemprego:</strong> 6,5%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h6><i class="fas fa-crystal-ball me-2"></i>Projeções Futuras</h6>
+                        <p>
+                            As projeções demográficas indicam crescimento sustentado da população, 
+                            com potencial para atingir 250.000 habitantes até 2030, mantendo a 
+                            demanda por educação superior em expansão.
+                        </p>
+                        
+                        <div class="alert alert-success mt-4">
+                            <h6 class="alert-heading">
+                                <i class="fas fa-lightbulb me-2"></i>
+                                Oportunidades Identificadas
+                            </h6>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <strong>Para as IES:</strong>
+                                    <ul class="mb-0">
+                                        <li>Expansão da oferta de vagas</li>
+                                        <li>Novos cursos alinhados ao mercado</li>
+                                        <li>Parcerias com empresas locais</li>
+                                        <li>Programas de extensão comunitária</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Para a Região:</strong>
+                                    <ul class="mb-0">
+                                        <li>Atração de investimentos</li>
+                                        <li>Qualificação da mão de obra</li>
+                                        <li>Desenvolvimento tecnológico</li>
+                                        <li>Melhoria da qualidade de vida</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparativo Regional -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card info-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-map-marked-alt me-2"></i>
+                        Comparativo Regional - População e Educação Superior
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Município</th>
+                                    <th>População (2024)</th>
+                                    <th>IES Ativas</th>
+                                    <th>Matrículas ES</th>
+                                    <th>Taxa Escolarização</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Chapecó</strong></td>
+                                    <td>235.000</td>
+                                    <td>12</td>
+                                    <td>25.000</td>
+                                    <td>35%</td>
+                                </tr>
+                                <tr>
+                                    <td>Joaçaba</td>
+                                    <td>29.000</td>
+                                    <td>3</td>
+                                    <td>4.500</td>
+                                    <td>28%</td>
+                                </tr>
+                                <tr>
+                                    <td>Concórdia</td>
+                                    <td>75.000</td>
+                                    <td>4</td>
+                                    <td>6.200</td>
+                                    <td>22%</td>
+                                </tr>
+                                <tr>
+                                    <td>São Miguel do Oeste</td>
+                                    <td>40.000</td>
+                                    <td>2</td>
+                                    <td>3.800</td>
+                                    <td>25%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estatísticas Resumidas -->
+    <div class="row mb-5">
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-users fa-2x text-primary mb-2"></i>
+                    <h4 class="card-title">235.000</h4>
+                    <p class="card-text">População Atual</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-chart-line fa-2x text-success mb-2"></i>
+                    <h4 class="card-title">+28%</h4>
+                    <p class="card-text">Crescimento 2010-2024</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-graduation-cap fa-2x text-warning mb-2"></i>
+                    <h4 class="card-title">18.500</h4>
+                    <p class="card-text">Jovens 18-24 anos</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-city fa-2x text-info mb-2"></i>
+                    <h4 class="card-title">0,790</h4>
+                    <p class="card-text">IDH Municipal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Aguardar carregamento completo da página antes de inicializar gráficos
+document.addEventListener('DOMContentLoaded', function() {
+    // Os gráficos serão inicializados pelos scripts específicos carregados pelo navigation.js
+    console.log('Página População Chapecó carregada');
+});
+</script>

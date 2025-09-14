@@ -1,0 +1,281 @@
+[
+    {
+        "categoria_adm": "Especial",
+        "ano": 2014,
+        "sem_graduacao": 0,
+        "graduacao": 4,
+        "especializacao": 237,
+        "mestrado": 295,
+        "doutorado": 96
+    },
+    {
+        "categoria_adm": "Privada com fins lucrativos",
+        "ano": 2014,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 53,
+        "mestrado": 40,
+        "doutorado": 7
+    },
+    {
+        "categoria_adm": "Privada com fins lucrativos",
+        "ano": 2015,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 65,
+        "mestrado": 53,
+        "doutorado": 12
+    },
+    {
+        "categoria_adm": "Privada com fins lucrativos",
+        "ano": 2016,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 81,
+        "mestrado": 65,
+        "doutorado": 12
+    },
+    {
+        "categoria_adm": "Privada com fins lucrativos",
+        "ano": 2017,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 54,
+        "mestrado": 84,
+        "doutorado": 17
+    },
+    {
+        "categoria_adm": "Privada com fins lucrativos",
+        "ano": 2018,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 59,
+        "mestrado": 82,
+        "doutorado": 20
+    },
+    {
+        "categoria_adm": "Privada com fins lucrativos",
+        "ano": 2019,
+        "sem_graduacao": 0,
+        "graduacao": 2,
+        "especializacao": 58,
+        "mestrado": 84,
+        "doutorado": 25
+    },
+    {
+        "categoria_adm": "Privada com fins lucrativos",
+        "ano": 2020,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 58,
+        "mestrado": 75,
+        "doutorado": 18
+    },
+    {
+        "categoria_adm": "Privada com fins lucrativos",
+        "ano": 2021,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 59,
+        "mestrado": 88,
+        "doutorado": 41
+    },
+    {
+        "categoria_adm": "Privada com fins lucrativos",
+        "ano": 2022,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 58,
+        "mestrado": 103,
+        "doutorado": 51
+    },
+    {
+        "categoria_adm": "Privada com fins lucrativos",
+        "ano": 2023,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 65,
+        "mestrado": 103,
+        "doutorado": 44
+    },
+    {
+        "categoria_adm": "Privada sem fins lucrativos",
+        "ano": 2014,
+        "sem_graduacao": 0,
+        "graduacao": 1,
+        "especializacao": 41,
+        "mestrado": 30,
+        "doutorado": 4
+    },
+    {
+        "categoria_adm": "Privada sem fins lucrativos",
+        "ano": 2015,
+        "sem_graduacao": 0,
+        "graduacao": 1,
+        "especializacao": 244,
+        "mestrado": 302,
+        "doutorado": 109
+    },
+    {
+        "categoria_adm": "Privada sem fins lucrativos",
+        "ano": 2016,
+        "sem_graduacao": 0,
+        "graduacao": 3,
+        "especializacao": 158,
+        "mestrado": 274,
+        "doutorado": 123
+    },
+    {
+        "categoria_adm": "Privada sem fins lucrativos",
+        "ano": 2017,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 145,
+        "mestrado": 263,
+        "doutorado": 127
+    },
+    {
+        "categoria_adm": "Privada sem fins lucrativos",
+        "ano": 2018,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 105,
+        "mestrado": 260,
+        "doutorado": 127
+    },
+    {
+        "categoria_adm": "Privada sem fins lucrativos",
+        "ano": 2019,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 110,
+        "mestrado": 269,
+        "doutorado": 125
+    },
+    {
+        "categoria_adm": "Privada sem fins lucrativos",
+        "ano": 2020,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 97,
+        "mestrado": 265,
+        "doutorado": 124
+    },
+    {
+        "categoria_adm": "Privada sem fins lucrativos",
+        "ano": 2021,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 100,
+        "mestrado": 261,
+        "doutorado": 124
+    },
+    {
+        "categoria_adm": "Privada sem fins lucrativos",
+        "ano": 2022,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 88,
+        "mestrado": 248,
+        "doutorado": 129
+    },
+    {
+        "categoria_adm": "Privada sem fins lucrativos",
+        "ano": 2023,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 23,
+        "mestrado": 165,
+        "doutorado": 116
+    },
+    {
+        "categoria_adm": "Pública Federal",
+        "ano": 2014,
+        "sem_graduacao": 0,
+        "graduacao": 4,
+        "especializacao": 12,
+        "mestrado": 303,
+        "doutorado": 340
+    },
+    {
+        "categoria_adm": "Pública Federal",
+        "ano": 2015,
+        "sem_graduacao": 0,
+        "graduacao": 3,
+        "especializacao": 39,
+        "mestrado": 292,
+        "doutorado": 386
+    },
+    {
+        "categoria_adm": "Pública Federal",
+        "ano": 2016,
+        "sem_graduacao": 0,
+        "graduacao": 15,
+        "especializacao": 32,
+        "mestrado": 250,
+        "doutorado": 428
+    },
+    {
+        "categoria_adm": "Pública Federal",
+        "ano": 2017,
+        "sem_graduacao": 0,
+        "graduacao": 14,
+        "especializacao": 48,
+        "mestrado": 230,
+        "doutorado": 458
+    },
+    {
+        "categoria_adm": "Pública Federal",
+        "ano": 2018,
+        "sem_graduacao": 0,
+        "graduacao": 2,
+        "especializacao": 55,
+        "mestrado": 190,
+        "doutorado": 488
+    },
+    {
+        "categoria_adm": "Pública Federal",
+        "ano": 2019,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 55,
+        "mestrado": 171,
+        "doutorado": 527
+    },
+    {
+        "categoria_adm": "Pública Federal",
+        "ano": 2020,
+        "sem_graduacao": 0,
+        "graduacao": 2,
+        "especializacao": 45,
+        "mestrado": 160,
+        "doutorado": 617
+    },
+    {
+        "categoria_adm": "Pública Federal",
+        "ano": 2021,
+        "sem_graduacao": 3,
+        "graduacao": 19,
+        "especializacao": 39,
+        "mestrado": 134,
+        "doutorado": 632
+    },
+    {
+        "categoria_adm": "Pública Federal",
+        "ano": 2022,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 40,
+        "mestrado": 107,
+        "doutorado": 613
+    },
+    {
+        "categoria_adm": "Pública Federal",
+        "ano": 2023,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 50,
+        "mestrado": 80,
+        "doutorado": 486
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "nome_ies": "UNIVERSIDADE COMUNITÁRIA DA REGIÃO DE CHAPECÓ",
+        "matriculas_2014": 7887.0,
+        "matriculas_2019": 6874.0,
+        "matriculas_2023": 5301.0,
+        "total_geral": 20062.0
+    },
+    {
+        "nome_ies": "UNIVERSIDADE FEDERAL DA FRONTEIRA SUL",
+        "matriculas_2014": 2461.0,
+        "matriculas_2019": 2875.0,
+        "matriculas_2023": 2495.0,
+        "total_geral": 7831.0
+    },
+    {
+        "nome_ies": "UNIVERSIDADE PITÁGORAS UNOPAR ANHANGUERA",
+        "matriculas_2014": 2201.0,
+        "matriculas_2019": 2169.0,
+        "matriculas_2023": 2335.0,
+        "total_geral": 6705.0
+    },
+    {
+        "nome_ies": "UNIVERSIDADE DO OESTE DE SANTA CATARINA",
+        "matriculas_2014": 1763.0,
+        "matriculas_2019": 2072.0,
+        "matriculas_2023": 1802.0,
+        "total_geral": 5637.0
+    },
+    {
+        "nome_ies": "CENTRO UNIVERSITÁRIO LEONARDO DA VINCI",
+        "matriculas_2014": 0.0,
+        "matriculas_2019": 1524.0,
+        "matriculas_2023": 4093.0,
+        "total_geral": 5617.0
+    },
+    {
+        "nome_ies": "FACULDADE EMPRESARIAL DE CHAPECÓ",
+        "matriculas_2014": 1461.0,
+        "matriculas_2019": 1802.0,
+        "matriculas_2023": 1662.0,
+        "total_geral": 4925.0
+    },
+    {
+        "nome_ies": "FACULDADE SANTA RITA DE CHAPECÓ",
+        "matriculas_2014": 40.0,
+        "matriculas_2019": 1034.0,
+        "matriculas_2023": 2715.0,
+        "total_geral": 3789.0
+    },
+    {
+        "nome_ies": "UNIVERSIDADE CESUMAR",
+        "matriculas_2014": 0.0,
+        "matriculas_2019": 667.0,
+        "matriculas_2023": 1758.0,
+        "total_geral": 2425.0
+    },
+    {
+        "nome_ies": "FUNDAÇÃO UNIVERSIDADE DO ESTADO DE SANTA CATARINA",
+        "matriculas_2014": 597.0,
+        "matriculas_2019": 514.0,
+        "matriculas_2023": 342.0,
+        "total_geral": 1453.0
+    },
+    {
+        "nome_ies": "CENTRO UNIVERSITÁRIO INTERNACIONAL",
+        "matriculas_2014": 193.0,
+        "matriculas_2019": 388.0,
+        "matriculas_2023": 671.0,
+        "total_geral": 1252.0
+    }
+]

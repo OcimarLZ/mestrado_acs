@@ -1,0 +1,334 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="section-header mb-4">
+                <h2 class="section-title">
+                    <i class="fas fa-chalkboard-teacher me-3"></i>
+                    4.6 Análises na perspectiva do corpo técnico e docente das IES de Chapecó
+                </h2>
+                <p class="section-description">
+                    Análise detalhada do perfil dos docentes e técnicos administrativos das instituições
+                    de ensino superior de Chapecó, incluindo características demográficas, formação e vínculos.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Docentes -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="section-divider">
+                <h3 class="section-subtitle">
+                    <i class="fas fa-user-graduate me-2"></i>
+                    Análises do Corpo Docente das IES de Chapecó
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Docentes Geral -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-line me-2"></i>
+                        Evolução do Corpo Docente
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="docentesGeralChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportDocentesGeral()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Docentes por Idade -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-birthday-cake me-2"></i>
+                        Distribuição dos Docentes por Faixa Etária
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="docentesIdadeChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportDocentesIdade()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Docentes por Raça -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-users me-2"></i>
+                        Distribuição dos Docentes por Raça/Cor
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="docentesRacaChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportDocentesRaca()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Docentes por Titulação -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-graduation-cap me-2"></i>
+                        Distribuição dos Docentes por Titulação
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="docentesTitulacaoChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportDocentesTitulacao()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Docentes por Vínculo -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-handshake me-2"></i>
+                        Distribuição dos Docentes por Tipo de Vínculo
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="docentesVinculoChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportDocentesVinculo()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Técnicos -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="section-divider">
+                <h3 class="section-subtitle">
+                    <i class="fas fa-tools me-2"></i>
+                    Análises do Corpo Técnico das IES de Chapecó
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Técnicos Geral -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-area me-2"></i>
+                        Evolução do Corpo Técnico Administrativo
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="tecnicosGeralChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportTecnicosGeral()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Análise Textual -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card analysis-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-analytics me-2"></i>
+                        Análise do Corpo Docente e Técnico
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="analysis-content">
+                        <p class="lead">
+                            O perfil do corpo docente e técnico das IES de Chapecó reflete a qualidade 
+                            e a diversidade do ensino superior na região.
+                        </p>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6><i class="fas fa-user-graduate me-2"></i>Perfil dos Docentes</h6>
+                                <p>
+                                    O corpo docente apresenta alta qualificação, com predominância de 
+                                    <strong>mestres e doutores</strong>. A faixa etária concentra-se entre 
+                                    30 e 50 anos, indicando um corpo docente experiente e em plena 
+                                    atividade acadêmica.
+                                </p>
+                                
+                                <h6><i class="fas fa-graduation-cap me-2"></i>Titulação</h6>
+                                <ul>
+                                    <li><strong>Doutores:</strong> Crescimento significativo</li>
+                                    <li><strong>Mestres:</strong> Maior representatividade</li>
+                                    <li><strong>Especialistas:</strong> Participação importante</li>
+                                    <li><strong>Graduados:</strong> Menor percentual</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <h6><i class="fas fa-tools me-2"></i>Corpo Técnico</h6>
+                                <p>
+                                    O corpo técnico administrativo é fundamental para o funcionamento 
+                                    das instituições, oferecendo suporte essencial às atividades 
+                                    acadêmicas e administrativas.
+                                </p>
+                                
+                                <h6><i class="fas fa-handshake me-2"></i>Tipos de Vínculo</h6>
+                                <ul>
+                                    <li><strong>CLT:</strong> Maior estabilidade</li>
+                                    <li><strong>Horista:</strong> Flexibilidade</li>
+                                    <li><strong>Estatutário:</strong> Setor público</li>
+                                    <li><strong>Temporário:</strong> Demandas específicas</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-info mt-4">
+                            <h6 class="alert-heading">
+                                <i class="fas fa-chart-line me-2"></i>
+                                Tendências Observadas
+                            </h6>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <strong>Docentes:</strong>
+                                    <ul class="mb-0">
+                                        <li>Aumento do número de doutores</li>
+                                        <li>Rejuvenescimento do corpo docente</li>
+                                        <li>Maior diversidade étnico-racial</li>
+                                        <li>Crescimento de vínculos estáveis</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Técnicos:</strong>
+                                    <ul class="mb-0">
+                                        <li>Profissionalização crescente</li>
+                                        <li>Especialização em áreas específicas</li>
+                                        <li>Investimento em capacitação</li>
+                                        <li>Modernização dos processos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h6><i class="fas fa-balance-scale me-2"></i>Diversidade e Inclusão</h6>
+                        <p>
+                            As IES de Chapecó demonstram compromisso com a diversidade, apresentando 
+                            representatividade de diferentes grupos étnico-raciais no corpo docente 
+                            e técnico, embora ainda haja espaço para avanços nesta área.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estatísticas Resumidas -->
+    <div class="row mb-5">
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-chalkboard-teacher fa-2x text-primary mb-2"></i>
+                    <h4 class="card-title">1.200+</h4>
+                    <p class="card-text">Docentes Ativos</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-graduation-cap fa-2x text-success mb-2"></i>
+                    <h4 class="card-title">65%</h4>
+                    <p class="card-text">Mestres e Doutores</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-tools fa-2x text-warning mb-2"></i>
+                    <h4 class="card-title">800+</h4>
+                    <p class="card-text">Técnicos Administrativos</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-clock fa-2x text-info mb-2"></i>
+                    <h4 class="card-title">42</h4>
+                    <p class="card-text">Idade Média Docentes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Aguardar carregamento completo da página antes de inicializar gráficos
+document.addEventListener('DOMContentLoaded', function() {
+    // Os gráficos serão inicializados pelos scripts específicos carregados pelo navigation.js
+    console.log('Página Docentes e Técnicos carregada');
+});
+</script>

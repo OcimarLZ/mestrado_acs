@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Final - Gráfico Modalidade</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <h1>Teste Final - Gráfico de Modalidade</h1>
+    <div style="width: 800px; height: 400px; margin: 20px auto;">
+        <canvas id="discentesIdadeIngressantesModalidadeChart"></canvas>
+    </div>
+    <div style="text-align: center; margin: 20px;">
+        <button onclick="exportDiscentesIdadeIngressantesModalidadeToExcel()" style="padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px;">
+            Exportar para Excel
+        </button>
+    </div>
+    
+    <script>
+        console.log('=== TESTE FINAL INICIADO ===');
+        console.log('Chart.js disponível:', typeof Chart !== 'undefined');
+        console.log('XLSX disponível:', typeof XLSX !== 'undefined');
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM carregado');
+            
+            const canvas = document.getElementById('discentesIdadeIngressantesModalidadeChart');
+            console.log('Canvas encontrado:', canvas);
+            
+            if (!canvas) {
+                console.error('ERRO: Canvas não encontrado!');
+                return;
+            }
+            
+            const ctx = canvas.getContext('2d');
+            console.log('Contexto 2D obtido:', ctx);
+            
+            const testData = {
+                labels: ['2018', '2019', '2020', '2021', '2022'],
+                datasets: [{
+                    label: 'A Distância',
+                    data: [1000, 1200, 1500, 1800, 2000],
+                    borderColor: 'rgb(255, 99, 132)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    tension: 0.1
+                }, {
+                    label: 'Presencial',
+                    data: [5000, 5200, 4800, 4900, 5100],
+                    borderColor: 'rgb(54, 162, 235)',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    tension: 0.1
+                }]
+            };
+            
+            try {
+                const chart = new Chart(ctx, {
+                    type: 'line',
+                    data: testData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Discentes Ingressantes por Idade e Modalidade (Teste Final)'
+                            },
+                            legend: {
+                                display: true,
+                                position: 'top'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Número de Discentes'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Ano'
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                console.log('✓ SUCESSO: Gráfico criado:', chart);
+                
+                // Função de exportação
+                window.exportDiscentesIdadeIngressantesModalidadeToExcel = function() {
+                    console.log('Exportando para Excel...');
+                    const wb = XLSX.utils.book_new();
+                    const wsData = [['Ano', ...testData.datasets.map(d => d.label)]];
+                    
+                    testData.labels.forEach((ano, index) => {
+                        const row = [ano];
+                        testData.datasets.forEach(dataset => {
+                            row.push(dataset.data[index] || 0);
+                        });
+                        wsData.push(row);
+                    });
+                    
+                    const ws = XLSX.utils.aoa_to_sheet(wsData);
+                    XLSX.utils.book_append_sheet(wb, ws, 'Discentes por Idade e Modalidade');
+                    XLSX.writeFile(wb, 'discentes_idade_ingressantes_modalidade_teste.xlsx');
+                    console.log('✓ Arquivo Excel exportado');
+                };
+                
+            } catch (error) {
+                console.error('❌ ERRO ao criar gráfico:', error);
+            }
+        });
+    </script>
+</body>
+</html>

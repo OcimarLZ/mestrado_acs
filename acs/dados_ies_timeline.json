@@ -1,0 +1,490 @@
+[
+    {
+        "nome": "CENTRO UNIVERSITÁRIO ADVENTISTA DE SÃO PAULO",
+        "sigla": "UNASP",
+        "ano_inicio": 2023,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO ANHANGUERA PITÁGORAS AMPLI",
+        "sigla": "-",
+        "ano_inicio": 2020,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO ANHANGUERA PITÁGORAS UNOPAR DE NITERÓI",
+        "sigla": "UNIAN-RJ",
+        "ano_inicio": 2021,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO CIDADE VERDE",
+        "sigla": "UniCV",
+        "ano_inicio": 2021,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DA GRANDE DOURADOS",
+        "sigla": "UNIGRAN",
+        "ano_inicio": 2017,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DAS AMÉRICAS",
+        "sigla": "CAM",
+        "ano_inicio": 2019,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DAS FACULDADES METROPOLITANAS UNIDAS",
+        "sigla": "FMU",
+        "ano_inicio": 2017,
+        "ano_fim": 2022,
+        "modalidades": "A Distância",
+        "status": "Inativa desde 2022"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DE ARARAS -",
+        "sigla": "UNAR",
+        "ano_inicio": 2019,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DO SUL DE MINAS",
+        "sigla": "UNIS-MG",
+        "ano_inicio": 2022,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO ESTÁCIO DE BRASÍLIA - ESTÁCIO BRASÍLIA",
+        "sigla": "ESTÁCIO BRASÍLIA",
+        "ano_inicio": 2022,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FACVEST",
+        "sigla": "UNIFACVEST",
+        "ano_inicio": 2018,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FAEL",
+        "sigla": "UNIFAEL",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FAI",
+        "sigla": "-",
+        "ano_inicio": 2020,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FAVENI",
+        "sigla": "UNIFAVENI",
+        "ano_inicio": 2023,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FAVIP WYDEN",
+        "sigla": "UniFavip Wyden",
+        "ano_inicio": 2019,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO GUAIRACÁ",
+        "sigla": "UNIGUAIRACÁ",
+        "ano_inicio": 2021,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO INTERNACIONAL",
+        "sigla": "UNINTER",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO JOAQUIM NABUCO DE RECIFE",
+        "sigla": "UNINABUCO RECIFE",
+        "ano_inicio": 2023,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO LEONARDO DA VINCI",
+        "sigla": "UNIASSELVI",
+        "ano_inicio": 2017,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO MAURÍCIO DE NASSAU",
+        "sigla": "UNINASSAU",
+        "ano_inicio": 2018,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO SENAC",
+        "sigla": "SENACSP",
+        "ano_inicio": 2018,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO SENAI BLUMENAU",
+        "sigla": "-",
+        "ano_inicio": 2023,
+        "ano_fim": 2023,
+        "modalidades": "Presencial",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO SOCIESC",
+        "sigla": "-",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO UNIBTA",
+        "sigla": "-",
+        "ano_inicio": 2023,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO UNIDOM - BOSCO",
+        "sigla": "UNIDOM - BOSCO",
+        "ano_inicio": 2023,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO UNIFATECIE",
+        "sigla": "UNIFATECIE",
+        "ano_inicio": 2021,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO UNIFECAF",
+        "sigla": "-",
+        "ano_inicio": 2023,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "CLARETIANO - CENTRO UNIVERSITÁRIO",
+        "sigla": "CLARETIANOBT",
+        "ano_inicio": 2017,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "ESCOLA SUPERIOR ABERTA DO BRASIL",
+        "sigla": "ESAB",
+        "ano_inicio": 2018,
+        "ano_fim": 2022,
+        "modalidades": "A Distância",
+        "status": "Inativa desde 2022"
+    },
+    {
+        "nome": "FACULDADE CENSUPEG",
+        "sigla": "-",
+        "ano_inicio": 2023,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "FACULDADE DE EDUCAÇÃO SUPERIOR DE CHAPECÓ",
+        "sigla": "FACESC",
+        "ano_inicio": 2017,
+        "ano_fim": 2023,
+        "modalidades": "Presencial",
+        "status": "Ativa"
+    },
+    {
+        "nome": "FACULDADE DE TECNOLOGIA SENAI CHAPECÓ",
+        "sigla": "SENAI",
+        "ano_inicio": 2014,
+        "ano_fim": 2022,
+        "modalidades": "Presencial",
+        "status": "Inativa desde 2022"
+    },
+    {
+        "nome": "FACULDADE EMPRESARIAL DE CHAPECÓ",
+        "sigla": "FAEM",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "A Distância, Presencial",
+        "status": "Ativa"
+    },
+    {
+        "nome": "FACULDADE PITÁGORAS UNOPAR DE CHAPECÓ",
+        "sigla": "-",
+        "ano_inicio": 2021,
+        "ano_fim": 2023,
+        "modalidades": "Presencial",
+        "status": "Ativa"
+    },
+    {
+        "nome": "FACULDADE PREPARA",
+        "sigla": "-",
+        "ano_inicio": 2023,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "FACULDADE SANTA RITA DE CHAPECÓ",
+        "sigla": "-",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "Presencial",
+        "status": "Ativa"
+    },
+    {
+        "nome": "FACULDADE SENAC CHAPECÓ",
+        "sigla": "SENAC",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "Presencial",
+        "status": "Ativa"
+    },
+    {
+        "nome": "FACULDADE UNINA",
+        "sigla": "-",
+        "ano_inicio": 2020,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "FUNDAÇÃO UNIVERSIDADE DO ESTADO DE SANTA CATARINA",
+        "sigla": "UDESC",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "A Distância, Presencial",
+        "status": "Ativa"
+    },
+    {
+        "nome": "INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA  DE SANTA CATARINA",
+        "sigla": "IFSC",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "A Distância, Presencial",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE ANHANGUERA",
+        "sigla": "UNIDERP",
+        "ano_inicio": 2016,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE ANHEMBI MORUMBI",
+        "sigla": "UAM",
+        "ano_inicio": 2019,
+        "ano_fim": 2022,
+        "modalidades": "A Distância",
+        "status": "Inativa desde 2022"
+    },
+    {
+        "nome": "UNIVERSIDADE BRASIL",
+        "sigla": "UB",
+        "ano_inicio": 2018,
+        "ano_fim": 2019,
+        "modalidades": "A Distância",
+        "status": "Inativa desde 2019"
+    },
+    {
+        "nome": "UNIVERSIDADE CESUMAR",
+        "sigla": "UNICESUMAR",
+        "ano_inicio": 2016,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE CIDADE DE SÃO PAULO",
+        "sigla": "UNICID",
+        "ano_inicio": 2018,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE COMUNITÁRIA DA REGIÃO DE CHAPECÓ",
+        "sigla": "UNOCHAPECÓ",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "A Distância, Presencial",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE DE MARÍLIA",
+        "sigla": "UNIMAR",
+        "ano_inicio": 2022,
+        "ano_fim": 2022,
+        "modalidades": "A Distância",
+        "status": "Inativa desde 2022"
+    },
+    {
+        "nome": "UNIVERSIDADE DO CONTESTADO",
+        "sigla": "UNC",
+        "ano_inicio": 2014,
+        "ano_fim": 2021,
+        "modalidades": "A Distância",
+        "status": "Inativa desde 2021"
+    },
+    {
+        "nome": "UNIVERSIDADE DO OESTE DE SANTA CATARINA",
+        "sigla": "UNOESC",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "A Distância, Presencial",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE DO SUL DE SANTA CATARINA",
+        "sigla": "UNISUL",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE ESTÁCIO DE SÁ",
+        "sigla": "UNESA",
+        "ano_inicio": 2018,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE FEDERAL DA FRONTEIRA SUL",
+        "sigla": "UFFS",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "Presencial",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE FEDERAL DE SANTA CATARINA",
+        "sigla": "UFSC",
+        "ano_inicio": 2014,
+        "ano_fim": 2019,
+        "modalidades": "A Distância",
+        "status": "Inativa desde 2019"
+    },
+    {
+        "nome": "UNIVERSIDADE LA SALLE",
+        "sigla": "UNILASALLE",
+        "ano_inicio": 2023,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE LUTERANA DO BRASIL",
+        "sigla": "ULBRA",
+        "ano_inicio": 2014,
+        "ano_fim": 2015,
+        "modalidades": "A Distância",
+        "status": "Inativa desde 2015"
+    },
+    {
+        "nome": "UNIVERSIDADE PARANAENSE",
+        "sigla": "UNIPAR",
+        "ano_inicio": 2017,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE PAULISTA",
+        "sigla": "UNIP",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE PITÁGORAS UNOPAR ANHANGUERA",
+        "sigla": "-",
+        "ano_inicio": 2014,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE POSITIVO",
+        "sigla": "UP",
+        "ano_inicio": 2018,
+        "ano_fim": 2023,
+        "modalidades": "A Distância",
+        "status": "Ativa"
+    },
+    {
+        "nome": "UNIVERSIDADE POTIGUAR",
+        "sigla": "UNP",
+        "ano_inicio": 2016,
+        "ano_fim": 2020,
+        "modalidades": "A Distância",
+        "status": "Inativa desde 2020"
+    },
+    {
+        "nome": "UNIVERSIDADE UNIVERSUS VERITAS GUARULHOS",
+        "sigla": "Univeritas UNG",
+        "ano_inicio": 2017,
+        "ano_fim": 2019,
+        "modalidades": "A Distância",
+        "status": "Inativa desde 2019"
+    }
+]

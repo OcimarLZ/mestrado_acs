@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - Gráfico Matriculados Inclusão</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 20px 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        #debug-info {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Debug - Discentes Matriculados por Políticas de Inclusão</h1>
+        
+        <div class="chart-container">
+            <canvas id="inclusaoMatriculadosChart"></canvas>
+            <button id="exportInclusaoMatriculadosBtn" class="btn btn-sm btn-outline-primary" style="position: absolute; top: 10px; right: 10px; z-index: 10; padding: 4px 8px; font-size: 12px;">XLS</button>
+        </div>
+        
+        <div id="debug-info">
+            <h3>Debug Info:</h3>
+            <div id="debug-content">Carregando...</div>
+        </div>
+    </div>
+
+    <script>
+        // Debug script
+        async function debugTest() {
+            const debugDiv = document.getElementById('debug-content');
+            const info = [];
+            
+            // Verificar se o canvas existe
+            const canvas = document.getElementById('inclusaoMatriculadosChart');
+            info.push('Canvas encontrado: ' + (canvas ? 'SIM' : 'NÃO'));
+            
+            // Verificar se Chart.js está carregado
+            info.push('Chart.js carregado: ' + (typeof Chart !== 'undefined' ? 'SIM' : 'NÃO'));
+            
+            // Tentar carregar dados
+            try {
+                const response = await fetch('dados_inclusao_matriculados.json');
+                info.push('Fetch response status: ' + response.status);
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    info.push('Dados carregados: SIM');
+                    info.push('Anos: ' + data.anos.length);
+                    info.push('Datasets: ' + data.datasets.length);
+                    
+                    // Tentar criar o gráfico
+                    const ctx = canvas.getContext('2d');
+                    
+                    const cores = {
+                        'Apoio social': '#FF6384',
+                        'Deficientes': '#36A2EB', 
+                        'Reserva vagas': '#FFCE56',
+                        'Reserva social': '#4BC0C0',
+                        'Reserva etnica': '#9966FF'
+                    };
+                    
+                    const chartDatasets = data.datasets.map(dataset => ({
+                        label: dataset.label,
+                        data: dataset.data,
+                        backgroundColor: cores[dataset.label] || '#999999',
+                        borderColor: cores[dataset.label] || '#999999',
+                        borderWidth: 2,
+                        fill: false,
+                        tension: 0.1
+                    }));
+                    
+                    const chart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: data.anos,
+                            datasets: chartDatasets
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'Discentes Matriculados por Políticas de Inclusão (2014-2023)'
+                                },
+                                legend: {
+                                    display: true,
+                                    position: 'top'
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    title: {
+                                        display: true,
+                                        text: 'Ano'
+                                    }
+                                },
+                                y: {
+                                    title: {
+                                        display: true,
+                                        text: 'Número de Matriculados'
+                                    },
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                    
+                    info.push('Gráfico criado: SIM');
+                } else {
+                    info.push('Erro no fetch: ' + response.statusText);
+                }
+            } catch (error) {
+                info.push('Erro: ' + error.message);
+            }
+            
+            debugDiv.innerHTML = info.join('<br>');
+        }
+        
+        // Executar debug quando a página carregar
+        document.addEventListener('DOMContentLoaded', debugTest);
+    </script>
+</body>
+</html>

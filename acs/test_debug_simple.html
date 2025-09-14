@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Simples - Gráfico Matriculados</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Debug - Gráfico Matriculados Inclusão</h1>
+    
+    <div style="width: 800px; height: 400px; border: 1px solid #ccc; margin: 20px 0;">
+        <canvas id="inclusaoMatriculadosChart"></canvas>
+    </div>
+    
+    <div id="logs" style="background: #f0f0f0; padding: 10px; margin: 20px 0; font-family: monospace; white-space: pre-wrap;"></div>
+    
+    <script>
+        const logs = document.getElementById('logs');
+        function log(message) {
+            console.log(message);
+            logs.textContent += new Date().toLocaleTimeString() + ': ' + message + '\n';
+        }
+        
+        log('Página carregada');
+        log('Chart.js disponível: ' + (typeof Chart !== 'undefined'));
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            log('DOM carregado');
+            
+            const canvas = document.getElementById('inclusaoMatriculadosChart');
+            log('Canvas encontrado: ' + (canvas !== null));
+            
+            if (canvas) {
+                log('Tentando carregar dados...');
+                
+                fetch('dados_inclusao_matriculados.json')
+                    .then(response => {
+                        log('Response status: ' + response.status);
+                        return response.json();
+                    })
+                    .then(data => {
+                        log('Dados carregados: ' + JSON.stringify(data, null, 2).substring(0, 200) + '...');
+                        
+                        if (data && data.anos && data.datasets) {
+                            log('Criando gráfico...');
+                            
+                            const ctx = canvas.getContext('2d');
+                            const chart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: data.anos,
+                                    datasets: data.datasets.map((dataset, index) => ({
+                                        label: dataset.label,
+                                        data: dataset.data,
+                                        borderColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'][index],
+                                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'][index],
+                                        fill: false
+                                    }))
+                                },
+                                options: {
+                                    responsive: true,
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: 'Discentes Matriculados por Políticas de Inclusão'
+                                        }
+                                    }
+                                }
+                            });
+                            
+                            log('Gráfico criado com sucesso!');
+                        } else {
+                            log('Dados inválidos: ' + JSON.stringify(data));
+                        }
+                    })
+                    .catch(error => {
+                        log('Erro ao carregar dados: ' + error.message);
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

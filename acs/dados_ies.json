@@ -1,0 +1,368 @@
+[
+    {
+        "nome": "CENTRO UNIVERSITÁRIO ADVENTISTA DE SÃO PAULO",
+        "sigla": "UNASP",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO ANHANGUERA PITÁGORAS AMPLI",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO ANHANGUERA PITÁGORAS UNOPAR DE NITERÓI",
+        "sigla": "UNIAN-RJ",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO CIDADE VERDE",
+        "sigla": "UniCV",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DA GRANDE DOURADOS",
+        "sigla": "UNIGRAN",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DAS AMÉRICAS",
+        "sigla": "CAM",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DAS FACULDADES METROPOLITANAS UNIDAS",
+        "sigla": "FMU",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DE ARARAS -",
+        "sigla": "UNAR",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO DO SUL DE MINAS",
+        "sigla": "UNIS-MG",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO ESTÁCIO DE BRASÍLIA - ESTÁCIO BRASÍLIA",
+        "sigla": "ESTÁCIO BRASÍLIA",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FACVEST",
+        "sigla": "UNIFACVEST",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FAEL",
+        "sigla": "UNIFAEL",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FAI",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FAVENI",
+        "sigla": "UNIFAVENI",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO FAVIP WYDEN",
+        "sigla": "UniFavip Wyden",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO GUAIRACÁ",
+        "sigla": "UNIGUAIRACÁ",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO INTERNACIONAL",
+        "sigla": "UNINTER",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO JOAQUIM NABUCO DE RECIFE",
+        "sigla": "UNINABUCO RECIFE",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO LEONARDO DA VINCI",
+        "sigla": "UNIASSELVI",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO MAURÍCIO DE NASSAU",
+        "sigla": "UNINASSAU",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO SENAC",
+        "sigla": "SENACSP",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO SENAI BLUMENAU",
+        "sigla": "-",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO SOCIESC",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO UNIBTA",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO UNIDOM - BOSCO",
+        "sigla": "UNIDOM - BOSCO",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO UNIFATECIE",
+        "sigla": "UNIFATECIE",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CENTRO UNIVERSITÁRIO UNIFECAF",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "CLARETIANO - CENTRO UNIVERSITÁRIO",
+        "sigla": "CLARETIANOBT",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "ESCOLA SUPERIOR ABERTA DO BRASIL",
+        "sigla": "ESAB",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "FACULDADE CENSUPEG",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "FACULDADE DE EDUCAÇÃO SUPERIOR DE CHAPECÓ",
+        "sigla": "FACESC",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "FACULDADE DE TECNOLOGIA SENAI CHAPECÓ",
+        "sigla": "SENAI",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "FACULDADE EMPRESARIAL DE CHAPECÓ",
+        "sigla": "FAEM",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância, Presencial"
+    },
+    {
+        "nome": "FACULDADE PITÁGORAS UNOPAR DE CHAPECÓ",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "FACULDADE PREPARA",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "FACULDADE SANTA RITA DE CHAPECÓ",
+        "sigla": "-",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "FACULDADE SENAC CHAPECÓ",
+        "sigla": "SENAC",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "FACULDADE UNINA",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "FUNDAÇÃO UNIVERSIDADE DO ESTADO DE SANTA CATARINA",
+        "sigla": "UDESC",
+        "categoria": "Pública Estadual",
+        "modalidades": "A Distância, Presencial"
+    },
+    {
+        "nome": "INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA  DE SANTA CATARINA",
+        "sigla": "IFSC",
+        "categoria": "Pública Federal",
+        "modalidades": "A Distância, Presencial"
+    },
+    {
+        "nome": "UNIVERSIDADE ANHANGUERA",
+        "sigla": "UNIDERP",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE ANHEMBI MORUMBI",
+        "sigla": "UAM",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE BRASIL",
+        "sigla": "UB",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE CESUMAR",
+        "sigla": "UNICESUMAR",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE CIDADE DE SÃO PAULO",
+        "sigla": "UNICID",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE COMUNITÁRIA DA REGIÃO DE CHAPECÓ",
+        "sigla": "UNOCHAPECÓ",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância, Presencial"
+    },
+    {
+        "nome": "UNIVERSIDADE DE MARÍLIA",
+        "sigla": "UNIMAR",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE DO CONTESTADO",
+        "sigla": "UNC",
+        "categoria": "Especial",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE DO OESTE DE SANTA CATARINA",
+        "sigla": "UNOESC",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância, Presencial"
+    },
+    {
+        "nome": "UNIVERSIDADE DO SUL DE SANTA CATARINA",
+        "sigla": "UNISUL",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE ESTÁCIO DE SÁ",
+        "sigla": "UNESA",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE FEDERAL DA FRONTEIRA SUL",
+        "sigla": "UFFS",
+        "categoria": "Pública Federal",
+        "modalidades": "Presencial"
+    },
+    {
+        "nome": "UNIVERSIDADE FEDERAL DE SANTA CATARINA",
+        "sigla": "UFSC",
+        "categoria": "Pública Federal",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE LA SALLE",
+        "sigla": "UNILASALLE",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE LUTERANA DO BRASIL",
+        "sigla": "ULBRA",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE PARANAENSE",
+        "sigla": "UNIPAR",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE PAULISTA",
+        "sigla": "UNIP",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE PITÁGORAS UNOPAR ANHANGUERA",
+        "sigla": "-",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE POSITIVO",
+        "sigla": "UP",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE POTIGUAR",
+        "sigla": "UNP",
+        "categoria": "Privada com fins lucrativos",
+        "modalidades": "A Distância"
+    },
+    {
+        "nome": "UNIVERSIDADE UNIVERSUS VERITAS GUARULHOS",
+        "sigla": "Univeritas UNG",
+        "categoria": "Privada sem fins lucrativos",
+        "modalidades": "A Distância"
+    }
+]

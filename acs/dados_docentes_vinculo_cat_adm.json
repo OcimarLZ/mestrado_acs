@@ -1,0 +1,250 @@
+[
+    {
+        "ano": 2014,
+        "categoria_adm": "Especial",
+        "integral_de": 4,
+        "integral_sem_de": 274,
+        "parcial": 220,
+        "horista": 134
+    },
+    {
+        "ano": 2014,
+        "categoria_adm": "Privada com fins lucrativos",
+        "integral_de": 0,
+        "integral_sem_de": 16,
+        "parcial": 33,
+        "horista": 51
+    },
+    {
+        "ano": 2014,
+        "categoria_adm": "Privada sem fins lucrativos",
+        "integral_de": 1,
+        "integral_sem_de": 18,
+        "parcial": 8,
+        "horista": 49
+    },
+    {
+        "ano": 2014,
+        "categoria_adm": "Pública Federal",
+        "integral_de": 576,
+        "integral_sem_de": 48,
+        "parcial": 19,
+        "horista": 16
+    },
+    {
+        "ano": 2015,
+        "categoria_adm": "Privada com fins lucrativos",
+        "integral_de": 0,
+        "integral_sem_de": 18,
+        "parcial": 39,
+        "horista": 73
+    },
+    {
+        "ano": 2015,
+        "categoria_adm": "Privada sem fins lucrativos",
+        "integral_de": 6,
+        "integral_sem_de": 282,
+        "parcial": 235,
+        "horista": 133
+    },
+    {
+        "ano": 2015,
+        "categoria_adm": "Pública Federal",
+        "integral_de": 575,
+        "integral_sem_de": 97,
+        "parcial": 48,
+        "horista": 0
+    },
+    {
+        "ano": 2016,
+        "categoria_adm": "Privada com fins lucrativos",
+        "integral_de": 0,
+        "integral_sem_de": 17,
+        "parcial": 30,
+        "horista": 111
+    },
+    {
+        "ano": 2016,
+        "categoria_adm": "Privada sem fins lucrativos",
+        "integral_de": 3,
+        "integral_sem_de": 276,
+        "parcial": 180,
+        "horista": 99
+    },
+    {
+        "ano": 2016,
+        "categoria_adm": "Pública Federal",
+        "integral_de": 551,
+        "integral_sem_de": 106,
+        "parcial": 68,
+        "horista": 0
+    },
+    {
+        "ano": 2017,
+        "categoria_adm": "Privada com fins lucrativos",
+        "integral_de": 1,
+        "integral_sem_de": 21,
+        "parcial": 80,
+        "horista": 53
+    },
+    {
+        "ano": 2017,
+        "categoria_adm": "Privada sem fins lucrativos",
+        "integral_de": 3,
+        "integral_sem_de": 211,
+        "parcial": 190,
+        "horista": 131
+    },
+    {
+        "ano": 2017,
+        "categoria_adm": "Pública Federal",
+        "integral_de": 550,
+        "integral_sem_de": 117,
+        "parcial": 83,
+        "horista": 0
+    },
+    {
+        "ano": 2018,
+        "categoria_adm": "Privada com fins lucrativos",
+        "integral_de": 2,
+        "integral_sem_de": 16,
+        "parcial": 80,
+        "horista": 63
+    },
+    {
+        "ano": 2018,
+        "categoria_adm": "Privada sem fins lucrativos",
+        "integral_de": 10,
+        "integral_sem_de": 235,
+        "parcial": 170,
+        "horista": 77
+    },
+    {
+        "ano": 2018,
+        "categoria_adm": "Pública Federal",
+        "integral_de": 542,
+        "integral_sem_de": 100,
+        "parcial": 93,
+        "horista": 0
+    },
+    {
+        "ano": 2019,
+        "categoria_adm": "Privada com fins lucrativos",
+        "integral_de": 2,
+        "integral_sem_de": 19,
+        "parcial": 54,
+        "horista": 94
+    },
+    {
+        "ano": 2019,
+        "categoria_adm": "Privada sem fins lucrativos",
+        "integral_de": 2,
+        "integral_sem_de": 218,
+        "parcial": 191,
+        "horista": 93
+    },
+    {
+        "ano": 2019,
+        "categoria_adm": "Pública Federal",
+        "integral_de": 537,
+        "integral_sem_de": 120,
+        "parcial": 96,
+        "horista": 0
+    },
+    {
+        "ano": 2020,
+        "categoria_adm": "Privada com fins lucrativos",
+        "integral_de": 0,
+        "integral_sem_de": 17,
+        "parcial": 40,
+        "horista": 94
+    },
+    {
+        "ano": 2020,
+        "categoria_adm": "Privada sem fins lucrativos",
+        "integral_de": 4,
+        "integral_sem_de": 203,
+        "parcial": 184,
+        "horista": 95
+    },
+    {
+        "ano": 2020,
+        "categoria_adm": "Pública Federal",
+        "integral_de": 630,
+        "integral_sem_de": 100,
+        "parcial": 85,
+        "horista": 9
+    },
+    {
+        "ano": 2021,
+        "categoria_adm": "Privada com fins lucrativos",
+        "integral_de": 0,
+        "integral_sem_de": 16,
+        "parcial": 35,
+        "horista": 137
+    },
+    {
+        "ano": 2021,
+        "categoria_adm": "Privada sem fins lucrativos",
+        "integral_de": 13,
+        "integral_sem_de": 97,
+        "parcial": 329,
+        "horista": 46
+    },
+    {
+        "ano": 2021,
+        "categoria_adm": "Pública Federal",
+        "integral_de": 634,
+        "integral_sem_de": 91,
+        "parcial": 100,
+        "horista": 2
+    },
+    {
+        "ano": 2022,
+        "categoria_adm": "Privada com fins lucrativos",
+        "integral_de": 0,
+        "integral_sem_de": 26,
+        "parcial": 86,
+        "horista": 100
+    },
+    {
+        "ano": 2022,
+        "categoria_adm": "Privada sem fins lucrativos",
+        "integral_de": 5,
+        "integral_sem_de": 176,
+        "parcial": 178,
+        "horista": 106
+    },
+    {
+        "ano": 2022,
+        "categoria_adm": "Pública Federal",
+        "integral_de": 614,
+        "integral_sem_de": 16,
+        "parcial": 53,
+        "horista": 77
+    },
+    {
+        "ano": 2023,
+        "categoria_adm": "Privada com fins lucrativos",
+        "integral_de": 0,
+        "integral_sem_de": 32,
+        "parcial": 51,
+        "horista": 129
+    },
+    {
+        "ano": 2023,
+        "categoria_adm": "Privada sem fins lucrativos",
+        "integral_de": 1,
+        "integral_sem_de": 178,
+        "parcial": 102,
+        "horista": 23
+    },
+    {
+        "ano": 2023,
+        "categoria_adm": "Pública Federal",
+        "integral_de": 426,
+        "integral_sem_de": 76,
+        "parcial": 114,
+        "horista": 0
+    }
+]

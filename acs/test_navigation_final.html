@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Final de Navegação</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        .btn { padding: 10px 15px; margin: 5px; background: #007bff; color: white; border: none; cursor: pointer; }
+        .btn:hover { background: #0056b3; }
+        #log { background: #f8f9fa; padding: 10px; margin: 10px 0; border: 1px solid #ddd; height: 200px; overflow-y: auto; }
+        #content { background: #e9ecef; padding: 15px; margin: 10px 0; min-height: 100px; }
+    </style>
+</head>
+<body>
+    <h1>Teste Final de Navegação</h1>
+    
+    <div class="test-section">
+        <h3>1. Teste de JavaScript Básico</h3>
+        <button class="btn" onclick="testBasicJS()">Testar JavaScript</button>
+        <button class="btn" onclick="testConsole()">Testar Console</button>
+    </div>
+    
+    <div class="test-section">
+        <h3>2. Teste de Elementos DOM</h3>
+        <button class="btn" onclick="testDOMElements()">Verificar Elementos</button>
+    </div>
+    
+    <div class="test-section">
+        <h3>3. Teste de Requisição</h3>
+        <button class="btn" onclick="testFetch()">Testar Fetch</button>
+        <button class="btn" onclick="testXHR()">Testar XMLHttpRequest</button>
+    </div>
+    
+    <div class="test-section">
+        <h3>4. Teste de Navegação Completa</h3>
+        <button class="btn" onclick="testFullNavigation()">Testar Navegação</button>
+    </div>
+    
+    <div id="log"></div>
+    <div id="content">Conteúdo será carregado aqui...</div>
+    
+    <!-- Elementos simulando o index_modular.html -->
+    <div id="home-content" style="display: block;">HOME CONTENT</div>
+    <div id="page-content" style="display: none;">
+        <div id="loading-spinner" style="display: none;">LOADING...</div>
+        <div id="dynamic-content"></div>
+    </div>
+    
+    <script>
+        function log(message) {
+            const logDiv = document.getElementById('log');
+            const timestamp = new Date().toLocaleTimeString();
+            logDiv.innerHTML += `[${timestamp}] ${message}<br>`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+            console.log(message);
+        }
+        
+        function testBasicJS() {
+            log('✅ JavaScript está funcionando!');
+            alert('JavaScript OK!');
+        }
+        
+        function testConsole() {
+            console.log('Teste de console.log');
+            console.error('Teste de console.error');
+            log('✅ Console testado - verifique o DevTools');
+        }
+        
+        function testDOMElements() {
+            const elements = {
+                'home-content': document.getElementById('home-content'),
+                'page-content': document.getElementById('page-content'),
+                'dynamic-content': document.getElementById('dynamic-content'),
+                'loading-spinner': document.getElementById('loading-spinner')
+            };
+            
+            for (const [name, element] of Object.entries(elements)) {
+                if (element) {
+                    log(`✅ Elemento '${name}' encontrado`);
+                } else {
+                    log(`❌ Elemento '${name}' NÃO encontrado`);
+                }
+            }
+        }
+        
+        async function testFetch() {
+            try {
+                log('🔄 Testando fetch para pages/ies-perfil.html...');
+                const response = await fetch('pages/ies-perfil.html');
+                
+                if (response.ok) {
+                    const html = await response.text();
+                    log(`✅ Fetch OK - Status: ${response.status}, Tamanho: ${html.length} chars`);
+                    document.getElementById('content').innerHTML = html.substring(0, 500) + '...';
+                } else {
+                    log(`❌ Fetch falhou - Status: ${response.status}`);
+                }
+            } catch (error) {
+                log(`❌ Erro no fetch: ${error.message}`);
+            }
+        }
+        
+        function testXHR() {
+            log('🔄 Testando XMLHttpRequest para pages/ies-perfil.html...');
+            
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'pages/ies-perfil.html', true);
+            
+            xhr.onreadystatechange = function() {
+                log(`XHR State: ${xhr.readyState}, Status: ${xhr.status}`);
+                
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        log(`✅ XHR OK - Tamanho: ${xhr.responseText.length} chars`);
+                        document.getElementById('content').innerHTML = xhr.responseText.substring(0, 500) + '...';
+                    } else {
+                        log(`❌ XHR falhou - Status: ${xhr.status}`);
+                    }
+                }
+            };
+            
+            xhr.onerror = function() {
+                log('❌ Erro de rede no XHR');
+            };
+            
+            xhr.send();
+        }
+        
+        async function testFullNavigation() {
+            log('🔄 Iniciando teste completo de navegação...');
+            
+            // Simular o processo completo
+            const homeContent = document.getElementById('home-content');
+            const pageContent = document.getElementById('page-content');
+            const dynamicContent = document.getElementById('dynamic-content');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            
+            try {
+                // Passo 1: Esconder home e mostrar loading
+                log('📝 Passo 1: Escondendo home e mostrando loading...');
+                homeContent.style.display = 'none';
+                pageContent.style.display = 'block';
+                loadingSpinner.style.display = 'block';
+                dynamicContent.innerHTML = '';
+                
+                // Passo 2: Fazer requisição
+                log('📝 Passo 2: Fazendo requisição...');
+                const response = await fetch('pages/ies-perfil.html');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const html = await response.text();
+                
+                // Passo 3: Esconder loading e mostrar conteúdo
+                log('📝 Passo 3: Escondendo loading e mostrando conteúdo...');
+                loadingSpinner.style.display = 'none';
+                dynamicContent.innerHTML = html;
+                
+                log('✅ NAVEGAÇÃO COMPLETA FUNCIONOU!');
+                
+            } catch (error) {
+                log(`❌ Erro na navegação: ${error.message}`);
+                loadingSpinner.style.display = 'none';
+                dynamicContent.innerHTML = `<div style="color: red;">ERRO: ${error.message}</div>`;
+            }
+        }
+        
+        // Auto-teste ao carregar
+        window.addEventListener('load', function() {
+            log('🚀 Página carregada - iniciando auto-teste...');
+            testDOMElements();
+        });
+    </script>
+</body>
+</html>

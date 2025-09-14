@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Navegação</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .nav-button { 
+            display: inline-block; 
+            margin: 10px; 
+            padding: 10px 20px; 
+            background: #007bff; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .nav-button:hover { background: #0056b3; }
+        #content { 
+            margin-top: 20px; 
+            padding: 20px; 
+            border: 1px solid #ddd; 
+            min-height: 200px;
+        }
+        .loading { color: #666; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Teste de Navegação Modular</h1>
+    
+    <div>
+        <button class="nav-button" onclick="loadPage('home')">Home</button>
+        <button class="nav-button" onclick="loadPage('ies-perfil')">IES Perfil</button>
+        <button class="nav-button" onclick="loadPage('areas-conhecimento')">Áreas Conhecimento</button>
+        <button class="nav-button" onclick="loadPage('cursos-superiores')">Cursos Superiores</button>
+        <button class="nav-button" onclick="loadPage('discentes')">Discentes</button>
+    </div>
+    
+    <div id="content">
+        <h2>Página Inicial</h2>
+        <p>Clique nos botões acima para testar a navegação.</p>
+    </div>
+    
+    <script>
+        // Sistema de navegação simplificado para teste
+        const pages = {
+            'home': {
+                title: 'Início',
+                content: '<h2>Página Inicial</h2><p>Bem-vindo ao sistema de navegação modular.</p>'
+            },
+            'ies-perfil': {
+                title: '4.1 Perfil das IES',
+                file: 'pages/ies-perfil.html'
+            },
+            'areas-conhecimento': {
+                title: '4.2 Áreas de Conhecimento',
+                file: 'pages/areas-conhecimento.html'
+            },
+            'cursos-superiores': {
+                title: '4.3 Cursos Superiores',
+                file: 'pages/cursos-superiores.html'
+            },
+            'discentes': {
+                title: 'Discentes',
+                file: 'pages/discentes.html'
+            }
+        };
+        
+        async function loadPage(pageId) {
+            console.log(`Carregando página: ${pageId}`);
+            
+            const contentDiv = document.getElementById('content');
+            
+            if (!pages[pageId]) {
+                contentDiv.innerHTML = '<div class="error">Página não encontrada!</div>';
+                return;
+            }
+            
+            if (pageId === 'home') {
+                contentDiv.innerHTML = pages[pageId].content;
+                return;
+            }
+            
+            // Mostrar loading
+            contentDiv.innerHTML = '<div class="loading">Carregando...</div>';
+            
+            try {
+                console.log(`Buscando: ${pages[pageId].file}`);
+                const response = await fetch(pages[pageId].file);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const content = await response.text();
+                console.log('Conteúdo carregado com sucesso');
+                
+                contentDiv.innerHTML = `
+                    <h2>${pages[pageId].title}</h2>
+                    <div style="border: 1px solid #eee; padding: 10px; max-height: 400px; overflow-y: auto;">
+                        ${content}
+                    </div>
+                `;
+                
+            } catch (error) {
+                console.error('Erro ao carregar página:', error);
+                contentDiv.innerHTML = `
+                    <div class="error">
+                        <h3>Erro ao carregar página</h3>
+                        <p><strong>Erro:</strong> ${error.message}</p>
+                        <p><strong>Arquivo:</strong> ${pages[pageId].file}</p>
+                        <button onclick="loadPage('home')">Voltar ao Início</button>
+                    </div>
+                `;
+            }
+        }
+        
+        // Log inicial
+        console.log('Teste de navegação carregado');
+        console.log('Páginas disponíveis:', Object.keys(pages));
+    </script>
+</body>
+</html>

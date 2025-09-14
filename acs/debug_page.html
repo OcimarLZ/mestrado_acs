@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - Teste de Navegação</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .debug-section { border: 1px solid #ccc; padding: 15px; margin: 10px 0; }
+        .error { color: red; }
+        .success { color: green; }
+        .info { color: blue; }
+        button { margin: 5px; padding: 10px; }
+        #debug-output { background: #f5f5f5; padding: 10px; min-height: 200px; }
+    </style>
+</head>
+<body>
+    <h1>Debug - Teste de Navegação</h1>
+    
+    <div class="debug-section">
+        <h3>Teste de Elementos DOM</h3>
+        <button onclick="testDOMElements()">Verificar Elementos DOM</button>
+        <button onclick="testJavaScriptBasic()">Teste JavaScript Básico</button>
+    </div>
+    
+    <div class="debug-section">
+        <h3>Teste de Navegação</h3>
+        <button onclick="testNavigation('ies-perfil')">Testar IES Perfil</button>
+        <button onclick="testNavigation('discentes')">Testar Discentes</button>
+    </div>
+    
+    <div class="debug-section">
+        <h3>Elementos DOM Necessários</h3>
+        <div id="home-content" style="display: block; border: 1px solid green; padding: 10px;">
+            <h4>Home Content (Visível)</h4>
+            <p>Este é o conteúdo da home.</p>
+        </div>
+        
+        <div id="page-content" style="display: none; border: 1px solid blue; padding: 10px;">
+            <div id="loading-spinner" style="display: none; color: blue;">
+                <h4>Loading Spinner</h4>
+                <p>Carregando...</p>
+            </div>
+            <div id="dynamic-content">
+                <h4>Dynamic Content</h4>
+                <p>Conteúdo dinâmico será carregado aqui.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="debug-section">
+        <h3>Output de Debug</h3>
+        <div id="debug-output"></div>
+    </div>
+    
+    <script>
+        function log(message, type = 'info') {
+            const output = document.getElementById('debug-output');
+            const timestamp = new Date().toLocaleTimeString();
+            const className = type === 'error' ? 'error' : type === 'success' ? 'success' : 'info';
+            output.innerHTML += `<div class="${className}">[${timestamp}] ${message}</div>`;
+            output.scrollTop = output.scrollHeight;
+        }
+        
+        function testDOMElements() {
+            log('=== TESTE DE ELEMENTOS DOM ===');
+            
+            const elements = {
+                'home-content': document.getElementById('home-content'),
+                'page-content': document.getElementById('page-content'),
+                'dynamic-content': document.getElementById('dynamic-content'),
+                'loading-spinner': document.getElementById('loading-spinner')
+            };
+            
+            for (const [id, element] of Object.entries(elements)) {
+                if (element) {
+                    log(`✓ Elemento '${id}' encontrado`, 'success');
+                } else {
+                    log(`✗ Elemento '${id}' NÃO encontrado`, 'error');
+                }
+            }
+        }
+        
+        function testJavaScriptBasic() {
+            log('=== TESTE JAVASCRIPT BÁSICO ===');
+            
+            try {
+                log('✓ JavaScript funcionando', 'success');
+                log('✓ Document ready state: ' + document.readyState, 'success');
+                log('✓ Window object: ' + typeof window, 'success');
+                log('✓ XMLHttpRequest: ' + typeof XMLHttpRequest, 'success');
+            } catch (error) {
+                log('✗ Erro no JavaScript: ' + error.message, 'error');
+            }
+        }
+        
+        function testNavigation(pageId) {
+            log(`=== TESTE DE NAVEGAÇÃO: ${pageId} ===`);
+            
+            try {
+                // Verificar elementos
+                const homeContent = document.getElementById('home-content');
+                const pageContent = document.getElementById('page-content');
+                const dynamicContent = document.getElementById('dynamic-content');
+                const loadingSpinner = document.getElementById('loading-spinner');
+                
+                if (!homeContent || !pageContent || !dynamicContent || !loadingSpinner) {
+                    log('✗ Elementos DOM não encontrados', 'error');
+                    return;
+                }
+                
+                log('✓ Elementos DOM encontrados', 'success');
+                
+                // Simular navegação
+                homeContent.style.display = 'none';
+                pageContent.style.display = 'block';
+                loadingSpinner.style.display = 'block';
+                dynamicContent.innerHTML = '';
+                
+                log('✓ Loading exibido', 'success');
+                
+                // Fazer requisição real
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', `pages/${pageId}.html`, true);
+                
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            log(`✓ Página ${pageId}.html carregada com sucesso`, 'success');
+                            loadingSpinner.style.display = 'none';
+                            dynamicContent.innerHTML = xhr.responseText;
+                        } else {
+                            log(`✗ Erro ao carregar ${pageId}.html: ${xhr.status}`, 'error');
+                            loadingSpinner.style.display = 'none';
+                            dynamicContent.innerHTML = `<div style="color: red;">Erro ${xhr.status}</div>`;
+                        }
+                    }
+                };
+                
+                xhr.onerror = function() {
+                    log(`✗ Erro de rede ao carregar ${pageId}.html`, 'error');
+                    loadingSpinner.style.display = 'none';
+                    dynamicContent.innerHTML = '<div style="color: red;">Erro de rede</div>';
+                };
+                
+                log(`→ Fazendo requisição para pages/${pageId}.html`);
+                xhr.send();
+                
+            } catch (error) {
+                log('✗ Erro na execução: ' + error.message, 'error');
+            }
+        }
+        
+        // Capturar erros JavaScript
+        window.onerror = function(message, source, lineno, colno, error) {
+            log(`✗ ERRO JS: ${message} (linha ${lineno})`, 'error');
+            return false;
+        };
+        
+        // Log inicial
+        window.onload = function() {
+            log('=== PÁGINA CARREGADA ===');
+            log('✓ Window.onload executado', 'success');
+            testDOMElements();
+            testJavaScriptBasic();
+        };
+        
+        log('=== SCRIPT INICIADO ===');
+    </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="section-header mb-4">
+                <h2 class="section-title">
+                    <i class="fas fa-brain me-3"></i>
+                    4.2 As dinâmicas da educação superior de Chapecó por área de Conhecimento
+                </h2>
+                <p class="section-description">
+                    Análise das tendências e distribuição dos cursos superiores por área de conhecimento,
+                    identificando as principais demandas e ofertas educacionais na região.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dinâmicas por Área de Conhecimento -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-pie me-2"></i>
+                        Distribuição por Área de Conhecimento
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="dinamicasAreaChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportDinamicasArea()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Análise por Área Específica -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-bar me-2"></i>
+                        Evolução por Área Específica
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="dinamicasAreaEspecificaChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportDinamicasAreaEspecifica()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Análise Textual -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card analysis-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-microscope me-2"></i>
+                        Análise das Dinâmicas por Área de Conhecimento
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="analysis-content">
+                        <p class="lead">
+                            A distribuição dos cursos superiores por área de conhecimento em Chapecó reflete 
+                            as demandas regionais e as tendências nacionais do mercado de trabalho.
+                        </p>
+                        
+                        <h6><i class="fas fa-briefcase me-2"></i>Áreas Predominantes</h6>
+                        <p>
+                            As áreas de <strong>Ciências Sociais Aplicadas</strong> e <strong>Ciências da Saúde</strong> 
+                            concentram o maior número de matrículas, refletindo a demanda por profissionais 
+                            em administração, direito, enfermagem e medicina na região.
+                        </p>
+                        
+                        <h6><i class="fas fa-cogs me-2"></i>Engenharias e Tecnologias</h6>
+                        <p>
+                            A área de <strong>Engenharias</strong> apresenta crescimento consistente, 
+                            acompanhando o desenvolvimento industrial da região Oeste de Santa Catarina. 
+                            Os cursos tecnológicos também ganham espaço, atendendo demandas específicas do mercado.
+                        </p>
+                        
+                        <h6><i class="fas fa-graduation-cap me-2"></i>Licenciaturas</h6>
+                        <p>
+                            As <strong>Ciências Humanas</strong> e <strong>Ciências Exatas</strong> mantêm 
+                            participação importante através dos cursos de licenciatura, fundamentais para 
+                            a formação de professores na região.
+                        </p>
+                        
+                        <h6><i class="fas fa-seedling me-2"></i>Ciências Agrárias</h6>
+                        <p>
+                            Dada a vocação agrícola da região, as <strong>Ciências Agrárias</strong> 
+                            apresentam oferta significativa, com cursos voltados ao agronegócio, 
+                            veterinária e tecnologias agrícolas.
+                        </p>
+                        
+                        <div class="alert alert-info mt-4">
+                            <h6 class="alert-heading">
+                                <i class="fas fa-lightbulb me-2"></i>
+                                Tendências Observadas
+                            </h6>
+                            <ul class="mb-0">
+                                <li>Crescimento dos cursos na área de tecnologia da informação</li>
+                                <li>Expansão dos cursos de saúde, especialmente enfermagem</li>
+                                <li>Consolidação dos cursos de engenharia</li>
+                                <li>Manutenção da demanda por cursos de gestão e administração</li>
+                                <li>Emergência de novos cursos interdisciplinares</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detalhamento por Área -->
+    <div class="row mb-5">
+        <div class="col-md-6 mb-4">
+            <div class="card info-card">
+                <div class="card-header bg-primary text-white">
+                    <h6 class="card-title mb-0">
+                        <i class="fas fa-chart-line me-2"></i>
+                        Ciências Sociais Aplicadas
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Administração</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Direito</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Contabilidade</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Economia</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Comunicação Social</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card info-card">
+                <div class="card-header bg-success text-white">
+                    <h6 class="card-title mb-0">
+                        <i class="fas fa-heartbeat me-2"></i>
+                        Ciências da Saúde
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Medicina</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Enfermagem</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Fisioterapia</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Psicologia</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Farmácia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card info-card">
+                <div class="card-header bg-warning text-dark">
+                    <h6 class="card-title mb-0">
+                        <i class="fas fa-cogs me-2"></i>
+                        Engenharias
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Engenharia Civil</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Engenharia de Produção</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Engenharia Mecânica</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Engenharia Elétrica</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Engenharia de Computação</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card info-card">
+                <div class="card-header bg-info text-white">
+                    <h6 class="card-title mb-0">
+                        <i class="fas fa-seedling me-2"></i>
+                        Ciências Agrárias
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Agronomia</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Medicina Veterinária</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Zootecnia</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Engenharia de Alimentos</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Tecnologia em Agronegócio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Aguardar carregamento completo da página antes de inicializar gráficos
+document.addEventListener('DOMContentLoaded', function() {
+    // Os gráficos serão inicializados pelos scripts específicos carregados pelo navigation.js
+    console.log('Página Áreas de Conhecimento carregada');
+});
+</script>

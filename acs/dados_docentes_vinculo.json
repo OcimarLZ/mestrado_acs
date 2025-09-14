@@ -1,0 +1,72 @@
+[
+    {
+        "ano": 2014,
+        "integral_com_dedicacao": 581,
+        "integral_sem_dedicacao": 356,
+        "parcial": 280,
+        "horista": 250
+    },
+    {
+        "ano": 2015,
+        "integral_com_dedicacao": 581,
+        "integral_sem_dedicacao": 397,
+        "parcial": 322,
+        "horista": 206
+    },
+    {
+        "ano": 2016,
+        "integral_com_dedicacao": 554,
+        "integral_sem_dedicacao": 399,
+        "parcial": 278,
+        "horista": 210
+    },
+    {
+        "ano": 2017,
+        "integral_com_dedicacao": 554,
+        "integral_sem_dedicacao": 349,
+        "parcial": 353,
+        "horista": 184
+    },
+    {
+        "ano": 2018,
+        "integral_com_dedicacao": 554,
+        "integral_sem_dedicacao": 351,
+        "parcial": 343,
+        "horista": 140
+    },
+    {
+        "ano": 2019,
+        "integral_com_dedicacao": 541,
+        "integral_sem_dedicacao": 357,
+        "parcial": 341,
+        "horista": 187
+    },
+    {
+        "ano": 2020,
+        "integral_com_dedicacao": 634,
+        "integral_sem_dedicacao": 320,
+        "parcial": 309,
+        "horista": 198
+    },
+    {
+        "ano": 2021,
+        "integral_com_dedicacao": 647,
+        "integral_sem_dedicacao": 204,
+        "parcial": 464,
+        "horista": 185
+    },
+    {
+        "ano": 2022,
+        "integral_com_dedicacao": 619,
+        "integral_sem_dedicacao": 218,
+        "parcial": 317,
+        "horista": 283
+    },
+    {
+        "ano": 2023,
+        "integral_com_dedicacao": 427,
+        "integral_sem_dedicacao": 286,
+        "parcial": 267,
+        "horista": 152
+    }
+]

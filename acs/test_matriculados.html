@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Gráfico Matriculados Inclusão</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 20px 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Teste - Discentes Matriculados por Políticas de Inclusão</h1>
+        
+        <div class="chart-container">
+            <canvas id="inclusaoMatriculadosChart"></canvas>
+        </div>
+        
+        <div id="debug-info" style="margin-top: 20px; padding: 10px; background: #f0f0f0; border-radius: 4px;">
+            <h3>Debug Info:</h3>
+            <div id="debug-content">Carregando...</div>
+        </div>
+    </div>
+
+    <script src="inclusao_matriculados_chart.js"></script>
+    
+    <script>
+        // Debug script
+        setTimeout(() => {
+            const debugContent = document.getElementById('debug-content');
+            const canvas = document.getElementById('inclusaoMatriculadosChart');
+            
+            let info = [];
+            info.push(`Canvas encontrado: ${canvas ? 'Sim' : 'Não'}`);
+            
+            if (typeof inclusaoMatriculadosChart !== 'undefined') {
+                info.push(`Gráfico criado: ${inclusaoMatriculadosChart ? 'Sim' : 'Não'}`);
+            } else {
+                info.push('Variável inclusaoMatriculadosChart não definida');
+            }
+            
+            // Verificar se o arquivo JSON existe
+            fetch('dados_inclusao_matriculados.json')
+                .then(response => {
+                    info.push(`Arquivo JSON: ${response.ok ? 'Encontrado' : 'Não encontrado'}`);
+                    return response.json();
+                })
+                .then(data => {
+                    info.push(`Dados carregados: ${data ? 'Sim' : 'Não'}`);
+                    if (data && data.anos) {
+                        info.push(`Anos: ${data.anos.length} registros (${data.anos[0]} - ${data.anos[data.anos.length-1]})`);
+                    }
+                    if (data && data.datasets) {
+                        info.push(`Categorias: ${data.datasets.length}`);
+                        data.datasets.forEach(dataset => {
+                            info.push(`- ${dataset.label}: ${dataset.data.length} valores`);
+                        });
+                    }
+                    debugContent.innerHTML = info.join('<br>');
+                })
+                .catch(error => {
+                    info.push(`Erro ao carregar JSON: ${error.message}`);
+                    debugContent.innerHTML = info.join('<br>');
+                });
+        }, 2000);
+    </script>
+</body>
+</html>

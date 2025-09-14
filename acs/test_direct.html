@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste Direto do Gráfico</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Teste Direto - Gráfico Origem Escola Categoria</h1>
+    <div style="width: 800px; height: 400px; margin: 20px;">
+        <canvas id="discentesOrigemEscolaCategoriaChart"></canvas>
+    </div>
+    
+    <div id="debug-info" style="margin: 20px; padding: 10px; background: #f0f0f0;">
+        <h3>Debug Info:</h3>
+        <div id="debug-output"></div>
+    </div>
+    
+    <script>
+        const debugOutput = document.getElementById('debug-output');
+        
+        function addDebug(message) {
+            console.log(message);
+            debugOutput.innerHTML += '<p>' + message + '</p>';
+        }
+        
+        addDebug('=== TESTE DIRETO INICIADO ===');
+        
+        // Aguardar carregamento completo
+        window.addEventListener('load', function() {
+            addDebug('Window loaded');
+            
+            setTimeout(() => {
+                addDebug('Verificando Chart.js: ' + (typeof Chart !== 'undefined' ? 'OK' : 'ERRO'));
+                
+                const canvas = document.getElementById('discentesOrigemEscolaCategoriaChart');
+                addDebug('Canvas encontrado: ' + (canvas ? 'OK' : 'ERRO'));
+                
+                if (typeof Chart !== 'undefined' && canvas) {
+                    addDebug('Iniciando fetch dos dados...');
+                    
+                    fetch('dados_discentes_origem_escola_categoria.json')
+                        .then(response => {
+                            addDebug('Response status: ' + response.status);
+                            addDebug('Response ok: ' + response.ok);
+                            addDebug('Response headers: ' + response.headers.get('content-type'));
+                            
+                            if (!response.ok) {
+                                throw new Error('HTTP ' + response.status);
+                            }
+                            return response.text();
+                        })
+                        .then(text => {
+                            addDebug('Response text length: ' + text.length);
+                            addDebug('First 100 chars: ' + text.substring(0, 100));
+                            
+                            try {
+                                const data = JSON.parse(text);
+                                addDebug('JSON parsed successfully');
+                                addDebug('Anos: ' + (data.anos ? data.anos.length : 'undefined'));
+                                addDebug('Datasets: ' + (data.datasets ? data.datasets.length : 'undefined'));
+                                
+                                // Criar gráfico simples
+                                const ctx = canvas.getContext('2d');
+                                const chart = new Chart(ctx, {
+                                    type: 'line',
+                                    data: {
+                                        labels: data.anos || ['2020', '2021', '2022'],
+                                        datasets: data.datasets ? data.datasets.map((dataset, index) => ({
+                                            label: dataset.label,
+                                            data: dataset.data,
+                                            borderColor: 'rgb(' + (50 + index * 30) + ', 162, 235)',
+                                            backgroundColor: 'rgba(' + (50 + index * 30) + ', 162, 235, 0.2)'
+                                        })) : [{
+                                            label: 'Teste',
+                                            data: [10, 20, 15],
+                                            borderColor: 'rgb(75, 192, 192)',
+                                            backgroundColor: 'rgba(75, 192, 192, 0.2)'
+                                        }]
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        plugins: {
+                                            title: {
+                                                display: true,
+                                                text: 'Origem dos Discentes por Categoria'
+                                            }
+                                        }
+                                    }
+                                });
+                                
+                                addDebug('✓ GRÁFICO CRIADO COM SUCESSO!');
+                                
+                            } catch (parseError) {
+                                addDebug('❌ ERRO ao fazer parse do JSON: ' + parseError.message);
+                            }
+                        })
+                        .catch(error => {
+                            addDebug('❌ ERRO no fetch: ' + error.message);
+                        });
+                } else {
+                    addDebug('❌ Pré-requisitos não atendidos');
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>

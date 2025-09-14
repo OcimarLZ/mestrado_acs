@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+
+{% block title %}Relatórios INEP - Página Principal{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="h3">
+                <i class="fas fa-chart-line me-2"></i>
+                Relatórios por Categoria
+            </h1>
+            <div>
+                <button class="btn btn-outline-secondary btn-sm" onclick="atualizarStatus()">
+                    <i class="fas fa-sync-alt me-1"></i>Atualizar Status
+                </button>
+            </div>
+        </div>
+        
+        <div class="alert alert-info">
+            <i class="fas fa-info-circle me-2"></i>
+            <strong>Instruções:</strong> Clique em "Executar" para gerar um relatório. O processo pode levar alguns minutos.
+            Os resultados serão salvos nas pastas <code>docs/tabelas/</code> e <code>docs/graficos/</code>.
+        </div>
+    </div>
+</div>
+
+{% for categoria_id, categoria in categorias.items() %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4 class="card-title mb-0">
+                    <i class="fas fa-folder me-2"></i>
+                    {{ categoria.nome }}
+                </h4>
+                <small>{{ categoria.descricao }}</small>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    {% for relatorio_id, relatorio in categoria.relatorios.items() %}
+                    {% set relatorio_completo_id = categoria_id + '_' + relatorio_id %}
+                    <div class="col-lg-6 col-xl-4 mb-3">
+                        <div class="card h-100 border">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h6 class="card-title mb-0">
+                                    <i class="fas fa-file-alt me-2"></i>
+                                    {{ relatorio.nome }}
+                                </h6>
+                                <span class="badge bg-secondary">{{ relatorio.arquivo }}</span>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text small">{{ relatorio.descricao }}</p>
+                                
+                                <!-- Status do relatório -->
+                                <div id="status-{{ relatorio_completo_id }}" class="mb-3">
+                                    {% if relatorio_completo_id in status %}
+                                        {% set s = status[relatorio_completo_id] %}
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-circle status-{{ s.status }} me-2"></i>
+                                            <span class="status-{{ s.status }}">
+                                                {% if s.status == 'executando' %}
+                                                    <i class="fas fa-spinner fa-spin me-1"></i>Executando...
+                                                {% elif s.status == 'concluido' %}
+                                                    <i class="fas fa-check me-1"></i>Concluído
+                                                {% elif s.status == 'erro' %}
+                                                    <i class="fas fa-exclamation-triangle me-1"></i>Erro
+                                                {% elif s.status == 'timeout' %}
+                                                    <i class="fas fa-clock me-1"></i>Timeout
+                                                {% endif %}
+                                            </span>
+                                        </div>
+                                        {% if s.inicio %}
+                                            <small class="text-muted">
+                                                Início: {{ s.inicio }}
+                                                {% if s.fim %} | Fim: {{ s.fim }}{% endif %}
+                                            </small>
+                                        {% endif %}
+                                        {% if s.mensagem %}
+                                            <div class="mt-2">
+                                                <small class="text-muted">{{ s.mensagem }}</small>
+                                            </div>
+                                        {% endif %}
+                                    {% else %}
+                                        <span class="text-muted">
+                                            <i class="fas fa-circle me-1"></i>Não executado
+                                        </span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="{{ url_for('executar_relatorio', categoria_id=categoria_id, relatorio_id=relatorio_id) }}" 
+                                       class="btn btn-executar btn-sm">
+                                        <i class="fas fa-play me-1"></i>Executar
+                                    </a>
+                                    
+                                    {% if relatorio_completo_id in status %}
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-secondary" 
+                                                    onclick="verificarStatus('{{ categoria_id }}', '{{ relatorio_id }}')">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <a href="{{ url_for('limpar_status', categoria_id=categoria_id, relatorio_id=relatorio_id) }}" 
+                                               class="btn btn-outline-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<!-- Modal para detalhes do status -->
+<div class="modal fade" id="statusModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Status do Relatório</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="statusModalBody">
+                <!-- Conteúdo será preenchido via JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Função para verificar status de um relatório específico
+function verificarStatus(categoriaId, relatorioId) {
+    fetch(`/status/${categoriaId}/${relatorioId}`)
+        .then(response => response.json())
+        .then(data => {
+            let modalBody = document.getElementById('statusModalBody');
+            let statusText = '';
+            
+            if (data.status === 'nao_encontrado') {
+                statusText = '<p class="text-muted">Status não encontrado.</p>';
+            } else {
+                statusText = `
+                    <div class="row">
+                        <div class="col-6">
+                            <strong>Status:</strong><br>
+                            <span class="status-${data.status}">
+                                ${data.status.charAt(0).toUpperCase() + data.status.slice(1)}
+                            </span>
+                        </div>
+                        <div class="col-6">
+                            <strong>Início:</strong><br>
+                            ${data.inicio || 'N/A'}
+                        </div>
+                    </div>
+                    ${data.fim ? `
+                    <div class="row mt-2">
+                        <div class="col-6">
+                            <strong>Fim:</strong><br>
+                            ${data.fim}
+                        </div>
+                    </div>
+                    ` : ''}
+                    ${data.mensagem ? `
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <strong>Mensagem:</strong><br>
+                            <small class="text-muted">${data.mensagem}</small>
+                        </div>
+                    </div>
+                    ` : ''}
+                `;
+            }
+            
+            modalBody.innerHTML = statusText;
+            new bootstrap.Modal(document.getElementById('statusModal')).show();
+        })
+        .catch(error => {
+            console.error('Erro ao verificar status:', error);
+            alert('Erro ao verificar status do relatório');
+        });
+}
+
+// Função para atualizar status de todos os relatórios
+function atualizarStatus() {
+    location.reload();
+}
+
+// Atualizar status automaticamente a cada 10 segundos para relatórios em execução
+setInterval(function() {
+    let executando = false;
+    {% for categoria_id, categoria in categorias.items() %}
+        {% for relatorio_id, relatorio in categoria.relatorios.items() %}
+            {% set relatorio_completo_id = categoria_id + '_' + relatorio_id %}
+            {% if relatorio_completo_id in status and status[relatorio_completo_id].status == 'executando' %}
+                executando = true;
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+    
+    if (executando) {
+        location.reload();
+    }
+}, 10000);
+    </script>
+{% endblock %} 

@@ -1,0 +1,250 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="section-header mb-4">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap me-3"></i>
+                    4.3 Análise sobre os cursos superiores em Chapecó
+                </h2>
+                <p class="section-description">
+                    Análise detalhada dos cursos superiores oferecidos em Chapecó, incluindo distribuição
+                    por categoria administrativa, modalidade de ensino e ranking dos cursos mais procurados.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quantitativo de Cursos por Categoria -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-bar me-2"></i>
+                        Quantitativo de Cursos por Categoria Administrativa
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="cursosPorCategoriaChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportCursosPorCategoria()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quantitativo de Cursos por Modalidade -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-pie me-2"></i>
+                        Quantitativo de Cursos por Modalidade de Ensino
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="cursosPorModalidadeChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportCursosPorModalidade()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top 20 Cursos Presenciais -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-trophy me-2"></i>
+                        Top 20 Cursos Presenciais por Número de Matrículas
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div id="top20CursosPresenciaisTable"></div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportTop20CursosPresenciais()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top 20 Cursos a Distância -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card chart-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-laptop me-2"></i>
+                        Top 20 Cursos a Distância por Número de Matrículas
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div id="top20CursosDistanciaTable"></div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success btn-export" onclick="exportTop20CursosDistancia()">
+                            <i class="fas fa-download me-2"></i>
+                            Exportar para Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Análise Textual -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card analysis-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-line me-2"></i>
+                        Análise dos Cursos Superiores
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="analysis-content">
+                        <p class="lead">
+                            A oferta de cursos superiores em Chapecó apresenta características específicas 
+                            que refletem tanto as demandas regionais quanto as tendências nacionais da educação superior.
+                        </p>
+                        
+                        <h6><i class="fas fa-university me-2"></i>Distribuição por Categoria Administrativa</h6>
+                        <p>
+                            As instituições <strong>privadas</strong> concentram a maior diversidade de cursos, 
+                            oferecendo opções que atendem diferentes perfis socioeconômicos. As instituições 
+                            <strong>públicas</strong>, embora em menor número, oferecem cursos estratégicos 
+                            para o desenvolvimento regional.
+                        </p>
+                        
+                        <h6><i class="fas fa-laptop me-2"></i>Modalidades de Ensino</h6>
+                        <p>
+                            A modalidade <strong>presencial</strong> ainda predomina na oferta de cursos, 
+                            especialmente em áreas que exigem atividades práticas. A modalidade <strong>EAD</strong> 
+                            expandiu significativamente, democratizando o acesso e oferecendo flexibilidade 
+                            aos estudantes trabalhadores.
+                        </p>
+                        
+                        <h6><i class="fas fa-star me-2"></i>Cursos Mais Procurados</h6>
+                        <p>
+                            Entre os cursos presenciais, destacam-se <strong>Administração</strong>, 
+                            <strong>Direito</strong>, <strong>Enfermagem</strong> e <strong>Engenharia Civil</strong>. 
+                            Na modalidade EAD, <strong>Pedagogia</strong>, <strong>Administração</strong> 
+                            e <strong>Gestão de Recursos Humanos</strong> lideram as matrículas.
+                        </p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="alert alert-primary">
+                                    <h6 class="alert-heading">
+                                        <i class="fas fa-users me-2"></i>
+                                        Cursos Presenciais - Destaques
+                                    </h6>
+                                    <ul class="mb-0">
+                                        <li>Administração - Maior número de matrículas</li>
+                                        <li>Direito - Alta demanda tradicional</li>
+                                        <li>Enfermagem - Crescimento na área da saúde</li>
+                                        <li>Engenharia Civil - Desenvolvimento urbano</li>
+                                        <li>Medicina - Prestígio e necessidade regional</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="alert alert-success">
+                                    <h6 class="alert-heading">
+                                        <i class="fas fa-laptop me-2"></i>
+                                        Cursos EAD - Destaques
+                                    </h6>
+                                    <ul class="mb-0">
+                                        <li>Pedagogia - Formação de professores</li>
+                                        <li>Administração - Flexibilidade profissional</li>
+                                        <li>Gestão de RH - Demanda empresarial</li>
+                                        <li>Serviço Social - Área social em expansão</li>
+                                        <li>Ciências Contábeis - Necessidade do mercado</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h6><i class="fas fa-trend-up me-2"></i>Tendências Identificadas</h6>
+                        <p>
+                            Observa-se crescimento na oferta de cursos tecnológicos, especialmente na área 
+                            de TI, e expansão dos cursos de saúde. A interdisciplinaridade ganha espaço 
+                            com novos cursos que combinam diferentes áreas do conhecimento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estatísticas Resumidas -->
+    <div class="row mb-5">
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-graduation-cap fa-2x text-primary mb-2"></i>
+                    <h4 class="card-title">150+</h4>
+                    <p class="card-text">Cursos Oferecidos</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-users fa-2x text-success mb-2"></i>
+                    <h4 class="card-title">85%</h4>
+                    <p class="card-text">Modalidade Presencial</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-laptop fa-2x text-warning mb-2"></i>
+                    <h4 class="card-title">15%</h4>
+                    <p class="card-text">Modalidade EAD</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-university fa-2x text-info mb-2"></i>
+                    <h4 class="card-title">12</h4>
+                    <p class="card-text">Instituições Ativas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Aguardar carregamento completo da página antes de inicializar gráficos
+document.addEventListener('DOMContentLoaded', function() {
+    // Os gráficos serão inicializados pelos scripts específicos carregados pelo navigation.js
+    console.log('Página Cursos Superiores carregada');
+});
+</script>

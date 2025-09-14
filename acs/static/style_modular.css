@@ -1,0 +1,203 @@
+/* Estilos específicos para o layout modular */
+
+/* Navigation */
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-1px);
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.75rem 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+/* Page Content */
+.page-content {
+    min-height: calc(100vh - 200px);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.page-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cards */
+.hover-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #dee2e6;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+    border-color: #007bff;
+}
+
+.card-body i {
+    transition: all 0.3s ease;
+}
+
+.hover-card:hover .card-body i {
+    transform: scale(1.1);
+}
+
+/* Loading Spinner */
+#loading-spinner {
+    display: none;
+}
+
+.loading #loading-spinner {
+    display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .h4 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Chart containers */
+.chart-container {
+    position: relative;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Section titles */
+.section-title {
+    color: #2c3e50;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Commentary text */
+.chart-commentary {
+    text-align: justify;
+    line-height: 1.6;
+    color: #495057;
+}
+
+/* Export buttons */
+.btn-outline-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 123, 255, 0.25);
+}
+
+/* Breadcrumb style navigation */
+.breadcrumb-nav {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb-nav h2 {
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Animation for page transitions */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Table styles */
+.table-responsive {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.table th {
+    background-color: #f8f9fa;
+    border-top: none;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* Progress bars for loading */
+.progress-bar-custom {
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #6610f2);
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+
+/* Utility classes */
+.text-justify {
+    text-align: justify;
+}
+
+.shadow-custom {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .btn,
+    footer {
+        display: none !important;
+    }
+    
+    .container-fluid {
+        margin-top: 0 !important;
+    }
+    
+    .page-content {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

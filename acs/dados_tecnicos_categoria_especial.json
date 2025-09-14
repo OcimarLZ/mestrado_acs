@@ -1,0 +1,35 @@
+{
+    "anos": [
+        2014
+    ],
+    "total_tecnicos": [
+        412
+    ],
+    "femininos": [
+        262
+    ],
+    "masculinos": [
+        150
+    ],
+    "doutores": [
+        0
+    ],
+    "mestres": [
+        12
+    ],
+    "especialistas": [
+        62
+    ],
+    "superior": [
+        127
+    ],
+    "medio": [
+        192
+    ],
+    "fundamental": [
+        14
+    ],
+    "fundamental_incompleto": [
+        5
+    ]
+}

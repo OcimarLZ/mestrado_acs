@@ -1,0 +1,92 @@
+[
+    {
+        "ano_censo":2014,
+        "modalidade":"Curso a dist\u00e2ncia",
+        "matriculas":3011,
+        "ingressos":1561,
+        "concluintes":563,
+        "trancados":251,
+        "evadidos":601
+    },
+    {
+        "ano_censo":2015,
+        "modalidade":"Curso a dist\u00e2ncia",
+        "matriculas":3261,
+        "ingressos":1551,
+        "concluintes":571,
+        "trancados":323,
+        "evadidos":744
+    },
+    {
+        "ano_censo":2016,
+        "modalidade":"Curso a dist\u00e2ncia",
+        "matriculas":3727,
+        "ingressos":2169,
+        "concluintes":591,
+        "trancados":574,
+        "evadidos":999
+    },
+    {
+        "ano_censo":2017,
+        "modalidade":"Curso a dist\u00e2ncia",
+        "matriculas":4276,
+        "ingressos":2825,
+        "concluintes":697,
+        "trancados":760,
+        "evadidos":1627
+    },
+    {
+        "ano_censo":2018,
+        "modalidade":"Curso a dist\u00e2ncia",
+        "matriculas":5219,
+        "ingressos":3536,
+        "concluintes":886,
+        "trancados":779,
+        "evadidos":2118
+    },
+    {
+        "ano_censo":2019,
+        "modalidade":"Curso a dist\u00e2ncia",
+        "matriculas":6349,
+        "ingressos":3962,
+        "concluintes":948,
+        "trancados":898,
+        "evadidos":2031
+    },
+    {
+        "ano_censo":2020,
+        "modalidade":"Curso a dist\u00e2ncia",
+        "matriculas":7983,
+        "ingressos":5328,
+        "concluintes":1109,
+        "trancados":1397,
+        "evadidos":2361
+    },
+    {
+        "ano_censo":2021,
+        "modalidade":"Curso a dist\u00e2ncia",
+        "matriculas":9585,
+        "ingressos":6752,
+        "concluintes":1206,
+        "trancados":1455,
+        "evadidos":3810
+    },
+    {
+        "ano_censo":2022,
+        "modalidade":"Curso a dist\u00e2ncia",
+        "matriculas":11446,
+        "ingressos":8334,
+        "concluintes":961,
+        "trancados":1520,
+        "evadidos":5387
+    },
+    {
+        "ano_censo":2023,
+        "modalidade":"Curso a dist\u00e2ncia",
+        "matriculas":11649,
+        "ingressos":7621,
+        "concluintes":1403,
+        "trancados":1656,
+        "evadidos":6420
+    }
+]

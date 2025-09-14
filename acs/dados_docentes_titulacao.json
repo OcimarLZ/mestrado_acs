@@ -1,0 +1,82 @@
+[
+    {
+        "ano": 2014,
+        "sem_graduacao": 0,
+        "graduacao": 9,
+        "especializacao": 343,
+        "mestrado": 668,
+        "doutorado": 447
+    },
+    {
+        "ano": 2015,
+        "sem_graduacao": 0,
+        "graduacao": 4,
+        "especializacao": 348,
+        "mestrado": 647,
+        "doutorado": 507
+    },
+    {
+        "ano": 2016,
+        "sem_graduacao": 0,
+        "graduacao": 18,
+        "especializacao": 271,
+        "mestrado": 589,
+        "doutorado": 563
+    },
+    {
+        "ano": 2017,
+        "sem_graduacao": 0,
+        "graduacao": 14,
+        "especializacao": 247,
+        "mestrado": 577,
+        "doutorado": 602
+    },
+    {
+        "ano": 2018,
+        "sem_graduacao": 0,
+        "graduacao": 2,
+        "especializacao": 219,
+        "mestrado": 532,
+        "doutorado": 635
+    },
+    {
+        "ano": 2019,
+        "sem_graduacao": 0,
+        "graduacao": 2,
+        "especializacao": 223,
+        "mestrado": 524,
+        "doutorado": 677
+    },
+    {
+        "ano": 2020,
+        "sem_graduacao": 0,
+        "graduacao": 2,
+        "especializacao": 200,
+        "mestrado": 500,
+        "doutorado": 759
+    },
+    {
+        "ano": 2021,
+        "sem_graduacao": 3,
+        "graduacao": 19,
+        "especializacao": 198,
+        "mestrado": 483,
+        "doutorado": 797
+    },
+    {
+        "ano": 2022,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 186,
+        "mestrado": 458,
+        "doutorado": 793
+    },
+    {
+        "ano": 2023,
+        "sem_graduacao": 0,
+        "graduacao": 0,
+        "especializacao": 138,
+        "mestrado": 348,
+        "doutorado": 646
+    }
+]
