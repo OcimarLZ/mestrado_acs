@@ -180,3 +180,22 @@ html {
     0% { background-color: rgba(0, 123, 255, 0.1); }
     100% { background-color: transparent; }
 }
+/* Estilos para o novo menu de navegação */
+.navbar-custom {
+    background-color: #D8F3DC !important; /* Verde claro */
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: #2c3e50 !important; /* Cor de texto escura para contraste */
+    font-weight: 500;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #007bff !important; /* Cor de destaque ao passar o mouse */
+}
+
+.navbar-custom .dropdown-menu {
+    font-family: 'Poppins', sans-serif;
+}
